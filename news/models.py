@@ -8,6 +8,9 @@ class ProductFamily(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        verbose_name_plural = 'product families'
+
     def __str__(self):
         return self.product_name
 
