@@ -8,6 +8,8 @@ def basePreview(request):
 
 
 class RecentArticle(generic.ListView):
-    recent_articles = Article.objects.filter(
+    model= Article
+    queryset = Article.objects.filter(
         status=1).order_by('created_on')[0:3]
     template_name = 'index.html'
+
