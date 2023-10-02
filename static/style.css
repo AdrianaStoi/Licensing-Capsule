@@ -55,3 +55,25 @@ h1, h2 {
     border-radius: 1%;
 }
 
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .nav-item.login-register {
+        margin-left: 0px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+/* Style for logo image on Galaxy Fold*/
+@media (max-width: 287px) {
+
+    .navbar-brand img{
+        width: 160px;
+        height: 40px;
+    }
+   
+}
