@@ -6,6 +6,8 @@ from .models import Article
 def basePreview(request):
     return render(request, 'base.html')
 
+def newsPreview(request):
+    return render(request, 'news.html')
 
 class RecentArticle(generic.ListView):
     model= Article
