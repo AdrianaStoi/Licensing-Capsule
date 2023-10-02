@@ -55,6 +55,12 @@ h1, h2 {
     border-radius: 1%;
 }
 
+/*Style landing image container on the news.html page */
+.article-image-container {
+    background-color: #00008B;
+    min-height: 400px;
+}
+
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
@@ -66,14 +72,34 @@ h1, h2 {
         background-color: transparent;
         border: none;
     }
+
+    .article-image-container{
+        min-height: 300px;
+    }
+}
+
+/* Style for landing image container on news.html page on Surface Duo*/
+@media (max-width: 540px) {
+
+    .article-image-container{
+        min-height: 250px;
+    }
+}
+
+/* Style for landing image container on news.html page on Samsung Galaxy S20 Ultra*/
+@media (max-width: 412px) {
+
+    .article-image-container{
+        min-height: 170px;
+    }
 }
 
 /* Style for logo image on Galaxy Fold*/
 @media (max-width: 287px) {
 
-    .navbar-brand img{
+    nav.navbar img {
         width: 160px;
         height: 40px;
     }
-   
 }
+
