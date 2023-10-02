@@ -7,7 +7,7 @@ body {
 }
 
 /*Style logo image*/
-.navbar-brand > img  {
+nav.navbar img  {
     width: 190px;
     height: 40px;
 }
