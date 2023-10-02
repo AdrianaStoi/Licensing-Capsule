@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Exo:wght@500&display=swap');
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Style logo image*/
+.navbar-brand > img  {
+    width: 190px;
+    height: 40px;
+}
+
+/*Style text nav menu*/
+.navbar-nav .nav-link {
+    color: #00008B !important;
+    font-weight: bolder;
+}
+
+.nav-item.nav-hover:hover {
+    background-color: #aaebef;
+    border-radius: 5px; 
+    margin-left: 10px;
+}
+
+/*Style login and register*/
+.navbar .nav-item.login-register {
+    background-color: #aaebef;
+    border-radius: 5px; 
+    margin-left: 10px;
+}
+
