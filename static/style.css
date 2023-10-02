@@ -31,3 +31,27 @@ body {
     margin-left: 10px;
 }
 
+h1, h2 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    color: #00008B;
+}
+
+.landing-div {
+    background-color: #aaebef;
+}
+
+/* Style About us section */
+.aboutus-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bolder;
+}
+
+/*Style card product families*/
+.card-product-family {
+    background-color:#00008B;
+    color: #ffffff;
+    border-radius: 1%;
+}
+
