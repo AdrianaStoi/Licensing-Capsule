@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,6 +23,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
 
   <body>
@@ -65,6 +69,38 @@
         </div>
       </div>
     </nav>
+
+    <!--Search bar-->
+    <div class="container mt-3 mb-3">
+        <div class="row">
+            <div class="col-lg-auto ms-auto">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-warning" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    <!-- Content here -->
+    {% endblock content %}
+
+    <!--Footer-->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Licensing Capsule. All rights reserved.</p>
+            <!--Font Awesome Icons for social media-->
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Feel free to check our Facebook page (page will open in a separate tab)"class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener"
+                aria-label="Feel free to check our LikedIn page (page will open in a separate tab)"class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                aria-label="Feel free to check our Twitter page (page will open in a separate tab)"class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
 
