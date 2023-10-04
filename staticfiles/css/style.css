@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Exo:wght@500&display=swap');
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/*Style logo image*/
+nav.navbar img  {
+    width: 190px;
+    height: 40px;
+}
+
+/*Style text nav menu*/
+.navbar-nav .nav-link {
+    color: #00008B !important;
+    font-weight: bolder;
+}
+
+.nav-item.nav-hover:hover {
+    background-color: #aaebef;
+    border-radius: 5px; 
+    margin-left: 10px;
+}
+
+/*Style login and register*/
+.navbar .nav-item.login-register {
+    background-color: #aaebef;
+    border-radius: 5px; 
+    margin-left: 10px;
+}
+
+h1, h2 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    color: #00008B;
+}
+
+.landing-div {
+    background-color: #aaebef;
+}
+
+/* Style About us section */
+.aboutus-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bolder;
+}
+
+/*Style card product families*/
+.card-product-family {
+    background-color:#00008B;
+    color: #ffffff;
+    border-radius: 1%;
+}
+
+/*Style landing image container from the news.html page */
+.article-image-container {
+    background-color: #00008B;
+    min-height: 400px;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .nav-item.login-register {
+        margin-left: 0px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+    }
+
+    .article-image-container{
+        min-height: 300px;
+    }
+}
+
+/* Style for landing image container from the news.html page on Surface Duo*/
+@media (max-width: 540px) {
+
+    .article-image-container{
+        min-height: 250px;
+    }
+}
+
+/* Style for landing image container from the news.html page on Samsung Galaxy S20 Ultra*/
+@media (max-width: 412px) {
+
+    .article-image-container{
+        min-height: 170px;
+    }
+}
+
+/* Style for logo image on Galaxy Fold*/
+@media (max-width: 287px) {
+
+    nav.navbar img {
+        width: 160px;
+        height: 40px;
+    }
+}
+
