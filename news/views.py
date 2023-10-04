@@ -3,15 +3,12 @@ from django.views import generic
 from .models import Article
 
 
-def basePreview(request):
-    return render(request, 'base.html')
-
 def newsPreview(request):
     return render(request, 'news.html')
 
 class RecentArticle(generic.ListView):
-    model= Article
+    model = Article
     queryset = Article.objects.filter(
-        status=1).order_by('created_on')[0:3]
-    template_name = 'index.html'
-
+        status=1).order_by('-created_on')[:3]
+    template_name = 'index.html' 
+    context_object_name = 'recent_articles'
