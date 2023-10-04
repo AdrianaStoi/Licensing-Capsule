@@ -55,7 +55,7 @@ h1, h2 {
     border-radius: 1%;
 }
 
-/*Style landing image container on the news.html page */
+/*Style landing image container from the news.html page */
 .article-image-container {
     background-color: #00008B;
     min-height: 400px;
@@ -78,7 +78,7 @@ h1, h2 {
     }
 }
 
-/* Style for landing image container on news.html page on Surface Duo*/
+/* Style for landing image container from the news.html page on Surface Duo*/
 @media (max-width: 540px) {
 
     .article-image-container{
@@ -86,7 +86,7 @@ h1, h2 {
     }
 }
 
-/* Style for landing image container on news.html page on Samsung Galaxy S20 Ultra*/
+/* Style for landing image container from the news.html page on Samsung Galaxy S20 Ultra*/
 @media (max-width: 412px) {
 
     .article-image-container{
