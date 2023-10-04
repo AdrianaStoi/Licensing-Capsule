@@ -42,7 +42,7 @@
 
                         {% for Article in recent_articles %}
 
-                        <h3 class= "mt-4">{{ Article.title }}</h3>
+                        <a href="{% url 'singlearticle' Article.slug %}" class="text-decoration-none"><h3 class= "mt-4 ">{{ Article.title }}</h3> </a>
                         <span class="mb-1 text-muted">{{Article.created_on|date:"F d, Y" }} at {{ Article.created_on|date:"H:i" }} | {{ Article.author }}</span>
                         <p>{{ Article.excerpt|truncatewords:30 }}</p>
 

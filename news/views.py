@@ -33,7 +33,7 @@ class SingleArticle(View):
             request,
             "singlearticle.html",
             {
-                "post": post,
+                "article": article,
                 "comments": comments,
                 "liked": liked
             },

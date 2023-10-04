@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12 article-image-container d-flex justify-content-center align-items-center">
             <div class="col-md-10">
-                <img src="" class="img-fluid" alt="Landing Image">
+                <img src="{{ article.featured_image.url }}" class="img-fluid" alt="Illustration Image">
             </div>
         </div>
     </div>
@@ -15,17 +15,18 @@
 <section>
     <div class="container mt-4 mb-4">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="text-uppercase"></h2>
+                        <!--Article title-->
+                        <h2 class="text-uppercase">{{ article.title }}</h2>
+
+                        <!--Article author and article creation date-->
+                        <span class="mb-1 text-muted">{{article.created_on|date:"F d, Y" }} at {{ article.created_on|date:"H:i" }} | by {{ article.author }}</span>
+
+                        <!--Article content-->
+                        <p class="mt-4">{{ article.article_body | safe}}</p>
                         
-
-                        <h3 class= "mt-4">{{ Article.title }}</h3>
-                        <span class="mb-1 text-muted">{{Article.created_on|date:"F d, Y" }} at {{ Article.created_on|date:"H:i" }} | {{ Article.author }}</span>
-                        <p></p>
-
-                        {% endfor %}
                     </div>
                 </div>
             </div>
