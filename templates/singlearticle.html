@@ -3,10 +3,10 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 article-image-container d-flex justify-content-center align-items-center">
-            <div class="col-md-10">
-                <img src="{{ article.featured_image.url }}" class="img-fluid" alt="Illustration Image">
+    <div class="row justify-content-center">
+        <div class="col-md-12 featured-image-container d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <img src="https://res.cloudinary.com/dvplixxng/image/upload/{{ article.featured_image }}" class="img-fluid" alt="{{ article.title }}">
             </div>
         </div>
     </div>

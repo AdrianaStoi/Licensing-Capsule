@@ -65,6 +65,17 @@ a {
     min-height: 400px;
 }
 
+/*Style featured image from the singlearticle.html page */
+.featured-image-container {
+    background-color: #00008B;
+    max-height: 500px;
+}
+
+.featured-image-container img {
+    min-width: 100%;
+    max-height: 500px;
+}
+
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
