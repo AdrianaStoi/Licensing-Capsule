@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Article
+from django.db.models import Q
 
 
 class RecentArticle(generic.ListView):
@@ -38,3 +39,18 @@ class SingleArticle(View):
                 "liked": liked
             },
         )
+
+
+class SearchArticle(generic.ListView):
+    model = Article
+    template_name = 'search.html'
+    context_object_name = 'search_articles'
+
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query:
+            return Article.objects.filter( Q(title__icontains=query) | Q(excerpt__icontains=query) | Q(article_body__icontains=query, status=1)).order_by('-created_on')
+        else:
+            return Article.objects.none()
+
