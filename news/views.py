@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Article
+from .models import Article, ProductFamily 
 from django.db.models import Q
 
 
@@ -53,4 +53,13 @@ class SearchArticle(generic.ListView):
             return Article.objects.filter( Q(title__icontains=query) | Q(excerpt__icontains=query) | Q(article_body__icontains=query, status=1)).order_by('-created_on')
         else:
             return Article.objects.none()
+
+
+class ProductFamilyListView(generic.ListView):
+    model = ProductFamily
+    template_name = 'index.html' 
+    context_object_name = 'product_families'
+
+ 
+
 

@@ -51,24 +51,22 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body card-product-family">
                         <h5 class="card-title">Product Families:</h5>
                         <ul class="list-group">
-                            <li class="list-group-item">Microsoft 365</li>
-                            <li class="list-group-item">Office 365</li>
-                            <li class="list-group-item">Dynamics 365</li>
-                            <li class="list-group-item">Microsoft Power Platform</li>
-                            <li class="list-group-item">Microsoft Azure</li>
+                            {% for product_family in product_families %}
+                                <li class="list-group-item">{{ product_family.product_name }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+   
     <!--Most liked and commented articles-->
     <div class="container mt-4">
         <div class="row">
