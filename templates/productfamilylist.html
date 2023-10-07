@@ -1,0 +1,6 @@
+
+{% for product_family in product_names %}
+
+    <li class="list-group-item"> <a href="{% url 'articlesbyproductfamily' product_name_id %}">{{ product_family.product_name }} </a> <li>
+        
+{% endfor %}

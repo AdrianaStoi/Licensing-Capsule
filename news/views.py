@@ -55,11 +55,15 @@ class SearchArticle(generic.ListView):
             return Article.objects.none()
 
 
-class ProductFamilyListView(generic.ListView):
-    model = ProductFamily
-    template_name = 'index.html' 
-    context_object_name = 'product_families'
+def product_family_list_view(request):
+    product_names = ProductFamily.objects.all()
 
- 
+    context = {
+        'product_names':product_names
+    }
+    return render(request, 'productfamilylist.html', context)
 
-
+def article_by_product_family(request, product_name_id):
+    product_family = ProductFamily.objects.get(pk=product_name_id)
+    articles = Article.objects.filter(product_name=product_family)
+    return render(request, 'productfamily.html', {'product_family':product_family, 'articles':articles})

@@ -51,15 +51,14 @@
                     </div>
                 </div>
             </div>
-            
+
+            <!--Product Family list-->
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body card-product-family">
                         <h5 class="card-title">Product Families:</h5>
                         <ul class="list-group">
-                            {% for product_family in product_families %}
-                                <li class="list-group-item">{{ product_family.product_name }}</li>
-                            {% endfor %}
+                            <li class="list-group-item">{% include 'productfamilylist.html' %}</li>
                         </ul>
                     </div>
                 </div>
