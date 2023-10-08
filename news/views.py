@@ -10,6 +10,7 @@ class RecentArticle(generic.ListView):
         status=1).order_by('-created_on')[:3]
     template_name = 'index.html' 
     context_object_name = 'recent_articles'
+    extra_context = {"product_family": ProductFamily.objects.all()}
 
 class ListArticle(generic.ListView):
     model = Article
@@ -63,7 +64,8 @@ def product_family_list_view(request):
     }
     return render(request, 'productfamilylist.html', context)
 
+
 def article_by_product_family(request, product_name_id):
     product_family = ProductFamily.objects.get(pk=product_name_id)
-    articles = Article.objects.filter(product_name=product_family)
+    articles = Article.objects.filter(product_name=product_family, status=1)
     return render(request, 'productfamily.html', {'product_family':product_family, 'articles':articles})

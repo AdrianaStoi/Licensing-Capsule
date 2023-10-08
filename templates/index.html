@@ -58,7 +58,11 @@
                     <div class="card-body card-product-family">
                         <h5 class="card-title">Product Families:</h5>
                         <ul class="list-group">
-                            <li class="list-group-item">{% include 'productfamilylist.html' %}</li>
+                        {% for product in product_family %}
+
+                            <li class="list-group-item"> <a href="">{{ product.product_name }} </a> <li>
+        
+                        {% endfor %}
                         </ul>
                     </div>
                 </div>

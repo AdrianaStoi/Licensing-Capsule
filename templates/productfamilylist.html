@@ -1,6 +1,6 @@
 
-{% for product_family in product_names %}
+{% for product in product_family %}
 
-    <li class="list-group-item"> <a href="{% url 'articlesbyproductfamily' product_name_id %}">{{ product_family.product_name }} </a> <li>
+    <li class="list-group-item"> <a href="{% url 'articlesbyproductfamily' product_name_id %}">{{ product.product_name }} </a> <li>
         
 {% endfor %}
