@@ -58,12 +58,18 @@
                 <li class="nav-item nav-hover">
                     <a class="nav-link active" aria-current="page" href="{% url 'news' %}">News</a>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="nav-item login-register">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item login-register">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>
                 <li class="nav-item login-register">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
       </div>
