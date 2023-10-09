@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+
+{% block content %}
+
+<div class="container mt-4 mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h2>{% trans "Log In" %}</h2>
+            <p>{% blocktrans %}To leave a comment or like an article, please log in. If you haven't registered an account yet, please 
+                <a class="text-decoration-none text-register" href="{{ signup_url }}">Register</a> first.{% endblocktrans %}
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10 me-2">
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                {% endif %}
+                <button class="btn btn-warning btn-login-register" type="submit">{% trans "Log In" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

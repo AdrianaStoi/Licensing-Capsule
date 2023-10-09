@@ -76,6 +76,26 @@ a {
     max-height: 500px;
 }
 
+/*Style login page */
+.btn-warning.btn-login-register {
+    background-color: #aaebef;
+    border-radius: 0.25rem;
+    border: 2px solid #aaebef;
+    color: #00008B;
+    font-weight: bolder;
+
+}
+
+.text-register {
+    color: #00008B;
+    font-weight: bolder;
+}
+
+#input-customization {
+    border-radius: 10px;
+    border-color: #00008B;
+}
+
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
