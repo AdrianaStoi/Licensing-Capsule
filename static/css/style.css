@@ -4,6 +4,8 @@ body {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
+    background-color: #e1e6e6;
+    background-color: #ECECEC;
 }
 
 /*Style logo image*/
@@ -49,7 +51,14 @@ a {
 .aboutus-container {
     margin-top: 2%;
     margin-bottom: 2%;
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+.aboutus-paragraph {
+    background-color: #ffffff;
+    color: 	#000000;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
 }
 
 /*Style card product families*/
