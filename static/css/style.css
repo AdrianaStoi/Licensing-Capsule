@@ -24,7 +24,7 @@ nav.navbar img  {
     margin-left: 10px;
 }
 
-/*Style login and register*/
+/*Style nabar for login and register*/
 .navbar .nav-item.login-register {
     background-color: #aaebef;
     border-radius: 5px; 
@@ -76,7 +76,7 @@ a {
     max-height: 500px;
 }
 
-/*Style login page */
+/*Style login, logout and register page */
 .btn-warning.btn-login-register {
     background-color: #aaebef;
     border-radius: 0.25rem;
@@ -87,7 +87,7 @@ a {
 
 }
 
-.text-register {
+.text-register-login {
     color: #00008B;
     font-weight: bolder;
 }
@@ -100,6 +100,12 @@ input[type=text], input[type=password] {
 .container.vh-100 {
     height: 75vh !important;
 }
+
+/*Style register page */
+.register-card{
+    min-width: 70%;
+}
+
 
 @media (max-width: 991px) {
     .navbar-nav {
