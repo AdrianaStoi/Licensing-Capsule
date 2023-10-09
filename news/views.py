@@ -12,6 +12,16 @@ class RecentArticle(generic.ListView):
     context_object_name = 'recent_articles'
     extra_context = {"product_family": ProductFamily.objects.all()}
 
+class ArticlesByProductFamily(generic.ListView):
+    model = Article
+    template_name = 'productfamily.html'
+    context_object_name = 'articles'
+    
+    def get_queryset(self):
+        product_name = self.kwargs['product_name']
+        return Article.objects.filter(product_name=product_name)
+
+
 class ListArticle(generic.ListView):
     model = Article
     queryset = Article.objects.filter(
@@ -56,16 +66,3 @@ class SearchArticle(generic.ListView):
             return Article.objects.none()
 
 
-def product_family_list_view(request):
-    product_names = ProductFamily.objects.all()
-
-    context = {
-        'product_names':product_names
-    }
-    return render(request, 'productfamilylist.html', context)
-
-
-def article_by_product_family(request, product_name_id):
-    product_family = ProductFamily.objects.get(pk=product_name_id)
-    articles = Article.objects.filter(product_name=product_family, status=1)
-    return render(request, 'productfamily.html', {'product_family':product_family, 'articles':articles})

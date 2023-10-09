@@ -60,7 +60,7 @@
                         <ul class="list-group">
                         {% for product in product_family %}
 
-                            <li class="list-group-item"> <a href="">{{ product.product_name }} </a> <li>
+                            <li class="list-group-item list-unstyled"> <a href="{% url 'articlesbyproductfamily' product.product_name %}" class="text-decoration-none">{{ product.product_name }}</a></li>
         
                         {% endfor %}
                         </ul>
