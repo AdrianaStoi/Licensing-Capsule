@@ -19,8 +19,8 @@ class ArticlesByProductFamily(generic.ListView):
     context_object_name = 'articles'
     
     def get_queryset(self):
-        product_name = self.kwargs['product_name']
-        return Article.objects.filter(product_name=product_name)
+        queryset = self.request.GET.get('product_name')
+        return Article.objects.filter(status=1).order_by('-created_on')
 
 
 class ListArticle(generic.ListView):

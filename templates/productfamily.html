@@ -11,13 +11,13 @@
                         <h2 class="text-uppercase"> {{ product.product_name }} Articles :</h2>
 
                         {% if articles %}
-                            {% for article in articles %}
+                        {% for article in articles %}
 
-                                <h3 class="mt-4"><a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none">{{ article.title }}</a></h3>
-                                <span class="mb-1 text-muted">{{ article.created_on|date:"F d, Y" }} at {{ article.created_on|date:"H:i" }} | {{ article.author }}</span>
-                                <p>{{ article.excerpt|truncatewords:30 }}</p>
+                            <h3 class="mt-4"><a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none">{{ article.title }}</a></h3>
+                            <span class="mb-1 text-muted">{{ article.created_on|date:"F d, Y" }} at {{ article.created_on|date:"H:i" }} | {{ article.author }}</span>
+                            <p>{{ article.excerpt|truncatewords:30 }}</p>
 
-                            {% endfor %}
+                        {% endfor %}
                         {% else %}
                             <p> No articles found.</p>
                         {% endif %}
