@@ -47,8 +47,41 @@ class SingleArticle(View):
             {
                 "article": article,
                 "comments": comments,
+                "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
+            },
+        )
+
+    def post(self, request, slug, *args, **kwargs):
+
+        queryset = Article.objects.filter(status=1)
+        article = get_object_or_404(queryset, slug=slug)
+        comments = article.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if article.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment.user = request.user
+            comment.article = article
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "singlearticle.html",
+            {
+                "article": article,
+                "comments": comments,
+                "commented": True,
+                "commented_form": comment_form,
+                "liked": liked
             },
         )
 
