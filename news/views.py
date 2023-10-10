@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Article, ProductFamily 
 from django.db.models import Q
+from .forms import CommentForm
 
 
 class RecentArticle(generic.ListView):
@@ -32,7 +33,6 @@ class ListArticle(generic.ListView):
 
 class SingleArticle(View):
 
-
     def get (self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
@@ -47,7 +47,8 @@ class SingleArticle(View):
             {
                 "article": article,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm()
             },
         )
 
