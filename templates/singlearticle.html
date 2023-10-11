@@ -52,6 +52,9 @@
                             <span> {{comment.created_on}}</span> wrote: 
                         </p>
                         {{ comment.message | linebreaks }}
+                        {% if comment.user == user %}
+                        <button type="submit" class="btn btn-warning btn-lg mt-3"><a class="text-decoration-none" href="{% url 'editcomment' comment.id %}">Edit</a></button>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>

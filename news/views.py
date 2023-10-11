@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
-from .models import Article, ProductFamily 
+from .models import Article, ProductFamily, Comment 
 from django.db.models import Q
 from .forms import CommentForm
+
 
 
 class RecentArticle(generic.ListView):
@@ -21,7 +22,6 @@ class ArticlesByProductFamily(generic.ListView):
     def get_queryset(self):
         queryset = self.request.GET.get('product_name')
         return Article.objects.filter(status=1).order_by('-created_on')
-
 
 class ListArticle(generic.ListView):
     model = Article
@@ -86,6 +86,8 @@ class SingleArticle(View):
         )
 
 
+ 
+
 class SearchArticle(generic.ListView):
     model = Article
     template_name = 'search.html'
@@ -100,3 +102,18 @@ class SearchArticle(generic.ListView):
             return Article.objects.none()
 
 
+def editComment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment_form = None
+    article_slug= comment.article.slug
+
+    if request.user == comment.user:
+        if request.method == 'POST':
+            comment_form = CommentForm(request.POST, instance=comment)
+            if comment_form.is_valid():
+                comment_form.save()
+                return redirect('singlearticle', slug=article_slug)
+            else:
+                comment_form = CommentForm(instance=comment)
+                
+    return render(request, 'editcomment.html', {'comment_form':comment_form, 'comment':comment})
