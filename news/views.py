@@ -20,8 +20,8 @@ class ArticlesByProductFamily(generic.ListView):
     context_object_name = 'articles'
     
     def get_queryset(self):
-        queryset = self.request.GET.get('product_name')
-        return Article.objects.filter(status=1).order_by('-created_on')
+        product_id = self.request.GET.get('product_name__id__exact')
+        return Article.objects.filter(product_name=product_id, status=1).order_by('-created_on')
 
 class ListArticle(generic.ListView):
     model = Article
