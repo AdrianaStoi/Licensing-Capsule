@@ -48,8 +48,8 @@
                 <h3>Comments:</h3>
                 <div class="card-body">
                     {% for comment in comments %}
-                        <p>{{ comment.user }}
-                            <span> {{comment.created_on}}</span> wrote: 
+                        <p class="fw-bold">{{ comment.user }}
+                            <span class="fw-bold"> {{comment.created_on}}</span> wrote: 
                         </p>
                         {{ comment.message | linebreaks }}
                         {% if comment.user == user %}

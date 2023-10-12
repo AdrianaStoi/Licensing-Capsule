@@ -85,9 +85,6 @@ class SingleArticle(View):
             },
         )
 
-
- 
-
 class SearchArticle(generic.ListView):
     model = Article
     template_name = 'search.html'
