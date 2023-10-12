@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container vh-100 mt-4 mb-4">
+    <h3>Confirm Deletion</h3>
+    <p> Do you really want to delete the comment?</p>
+    <p>{{ comment.message }} </p>
+    <div class="col-md-6">
+        <form method="post" style="margin-top: 1.3em;">
+            {% csrf_token %}
+            <input type="submit" value="Yes" class="btn btn-danger btn-lg mt-3 mb-3">
+            <a href="{% url 'singlearticle' slug=comment.article.slug %}" class="btn btn-warning btn-lg mt-3 mb-3" >Cancel</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

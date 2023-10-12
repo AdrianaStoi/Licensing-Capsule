@@ -48,14 +48,24 @@
                 <h3>Comments:</h3>
                 <div class="card-body">
                     {% for comment in comments %}
-                        <p class="fw-bold">{{ comment.user }}
+                        <p class="fw-bold mt-3">{{ comment.user }}
                             <span class="fw-bold"> {{comment.created_on}}</span> wrote: 
                         </p>
                         {{ comment.message | linebreaks }}
                         {% if comment.user == user %}
                         <button type="submit" class="btn btn-warning btn-lg mt-3"><a class="text-decoration-none" href="{% url 'editcomment' comment.id %}">Edit</a></button>
+                        <a class="text-decoration-none" href="{% url 'confirmdeletecomment' comment.id %}"><button type="submit" class="btn btn-danger btn-lg mt-3">Delete</button></a>
                         {% endif %}
                     {% endfor %}
+                    
+                    <!-- If condition for success message if comment is deleted -->
+                    {% if messages %}
+                        <ul class="messages list-unstyled alert alert-success" role="alert">
+                            {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-md-4 mt-3">

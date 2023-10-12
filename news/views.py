@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Article, ProductFamily, Comment 
 from django.db.models import Q
 from .forms import CommentForm
+from django.contrib import messages
 
 
 
@@ -114,3 +115,15 @@ def editComment(request, comment_id):
                 comment_form = CommentForm(instance=comment)
                 
     return render(request, 'editcomment.html', {'comment_form':comment_form, 'comment':comment})
+
+def deleteComment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    article_slug= comment.article.slug
+
+    if request.method == 'POST':
+        if request.user == comment.user:
+            comment.delete()
+            messages.success(request, 'Comment deleted successfully.')
+            return redirect('singlearticle', slug=article_slug)
+
+    return render(request, 'confirmdeletecomment.html', {'comment':comment})

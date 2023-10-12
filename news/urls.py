@@ -8,4 +8,6 @@ urlpatterns = [
     path("search", views.SearchArticle.as_view(), name="search"),
     path('product/article/', views.ArticlesByProductFamily.as_view(), name='articlesbyproductfamily'),
     path("editcomment/<int:comment_id>", views.editComment, name="editcomment"),
+    path("deletecomment/<int:comment_id>", views.deleteComment, name="deletecomment"),
+    path("confirmdeletecomment/<int:comment_id>", views.deleteComment, name="confirmdeletecomment"),
 ]
