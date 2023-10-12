@@ -33,7 +33,7 @@ nav.navbar img  {
     margin-left: 10px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h5 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     color: #00008B;
@@ -120,6 +120,7 @@ input[type=text], input[type=password] {
     padding: 0%;
     background: none;
     border: none;
+    margin-right: 5%;
 }
 
 i {

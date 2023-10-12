@@ -45,12 +45,12 @@
                                         {% endif %}
                                     </form>
                                     {% else %}
-                                    <span class="text-secondary"><i class="fa-regular fa-heart like-button" style="color: #0074d9;"></i></span>
+                                    <span class="text-secondary" onclick="showModal('')"><i class="fa-regular fa-heart like-button" style="color: #0074d9;"></i></span>
                                     {% endif %}
-                                    <span class="text-secondary">{{ article.likes_number }}</span>
+                                    <span class="text-secondary mr-2">{{ article.likes_number }}</span>
                                 </strong>
                             </div>
-                            <div class="col-1">
+                            <div class="col-1 ml-3">
                                 {% with comments.count as total_comments %}
                                 <strong class="text-secondary d-flex justify-content-between align-items-center">
                                     <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i>
@@ -58,6 +58,22 @@
                                 </strong>
                                 {% endwith %}
                             </div>
+                            <div id="login-modal" class="modal" tabindex="-1">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Login or Register</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>You must be logged in in order to add a like or a comment.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" onclick="closeModal()">Ok</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
