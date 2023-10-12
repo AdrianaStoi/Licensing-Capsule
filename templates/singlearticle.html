@@ -30,12 +30,32 @@
                         <p class="mt-4">{{ article.article_body | safe}}</p>
                         <div class="row">
                             <div class="col-1">
-                                <strong><i class="fa-brands fa-gratipay" style="color: #0074d9;"></i> {{ article.number_of_likes }} </strong>
+                                <strong class="d-flex justify-content-between align-items-center">
+                                    {% if user.is_authenticated %}
+                                    <form class="d-inline" action="{% url 'articlelike' article.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        {% if liked %}
+                                        <button type="submit" name="article_id" value="{{ article.slug }}" class="btn btn-like like-button">
+                                            <i class="fa-brands fa-gratipay" style="color: #0074d9;"></i>
+                                        </button>
+                                        {% else %}
+                                        <button type="submit" name="article_id" value="{{ article.slug }}" class="btn btn-like like-button">
+                                            <i class="fa-regular fa-heart" style="color: #0074d9;"></i>
+                                        </button>
+                                        {% endif %}
+                                    </form>
+                                    {% else %}
+                                    <span class="text-secondary"><i class="fa-regular fa-heart like-button" style="color: #0074d9;"></i></span>
+                                    {% endif %}
+                                    <span class="text-secondary">{{ article.likes_number }}</span>
+                                </strong>
                             </div>
                             <div class="col-1">
-                                {% with commments.count as total_comments %}
-                                <strong><i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i>
-                                    {{ total_comments}}</strong>
+                                {% with comments.count as total_comments %}
+                                <strong class="text-secondary d-flex justify-content-between align-items-center">
+                                    <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i>
+                                    {{ total_comments}}
+                                </strong>
                                 {% endwith %}
                             </div>
                         </div>
@@ -53,19 +73,10 @@
                         </p>
                         {{ comment.message | linebreaks }}
                         {% if comment.user == user %}
-                        <button type="submit" class="btn btn-warning btn-lg mt-3"><a class="text-decoration-none" href="{% url 'editcomment' comment.id %}">Edit</a></button>
-                        <a class="text-decoration-none" href="{% url 'confirmdeletecomment' comment.id %}"><button type="submit" class="btn btn-danger btn-lg mt-3">Delete</button></a>
+                            <button type="submit" class="btn btn-warning btn-lg mt-3"><a class="text-decoration-none" href="{% url 'editcomment' comment.id %}">Edit</a></button>
+                            <a class="text-decoration-none" href="{% url 'confirmdeletecomment' comment.id %}"><button type="submit" class="btn btn-danger btn-lg mt-3">Delete</button></a>
                         {% endif %}
                     {% endfor %}
-                    
-                    <!-- If condition for success message if comment is deleted -->
-                    {% if messages %}
-                        <ul class="messages list-unstyled alert alert-success" role="alert">
-                            {% for message in messages %}
-                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
                 </div>
             </div>
             <div class="col-md-4 mt-3">

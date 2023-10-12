@@ -10,4 +10,6 @@ urlpatterns = [
     path("editcomment/<int:comment_id>", views.editComment, name="editcomment"),
     path("deletecomment/<int:comment_id>", views.deleteComment, name="deletecomment"),
     path("confirmdeletecomment/<int:comment_id>", views.deleteComment, name="confirmdeletecomment"),
+    path("like/<slug:slug>", views.ArticleLike.as_view(), name="articlelike"),
+
 ]

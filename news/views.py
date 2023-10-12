@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Article, ProductFamily, Comment 
 from django.db.models import Q
 from .forms import CommentForm
@@ -123,7 +124,18 @@ def deleteComment(request, comment_id):
     if request.method == 'POST':
         if request.user == comment.user:
             comment.delete()
-            messages.success(request, 'Comment deleted successfully.')
-            return redirect('singlearticle', slug=article_slug)
+        return redirect('singlearticle', slug=article_slug)
 
     return render(request, 'confirmdeletecomment.html', {'comment':comment})
+
+class ArticleLike(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        article = get_object_or_404(Article, slug=slug)
+
+        if article.likes.filter(id=request.user.id).exists():
+            article.likes.remove(request.user)
+        else: 
+            article.likes.add(request.user)
+        
+        return HttpResponseRedirect(reverse('singlearticle', args=[slug]))
