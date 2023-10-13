@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Article, ProductFamily, Comment 
-from django.db.models import Q
+from django.db.models import Q, Count
 from .forms import CommentForm
 from django.contrib import messages
 
@@ -15,6 +15,16 @@ class RecentArticle(generic.ListView):
     template_name = 'index.html' 
     context_object_name = 'recent_articles'
     extra_context = {"product_family": ProductFamily.objects.all()}
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        most_liked_articles = Article.objects.annotate(like_count = Count('likes')).order_by('-like_count')[:2]
+        most_commented_articles = Article.objects.annotate(comment_count = Count('comments')).order_by('-comment_count')[:1]
+
+        context['most_liked_articles'] = most_liked_articles
+        context['most_commented_articles'] = most_commented_articles
+        return context
 
 class ArticlesByProductFamily(generic.ListView):
     model = Article
@@ -92,7 +102,6 @@ class SearchArticle(generic.ListView):
     template_name = 'search.html'
     context_object_name = 'search_articles'
 
-
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
@@ -139,3 +148,5 @@ class ArticleLike(View):
             article.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('singlearticle', args=[slug]))
+
+

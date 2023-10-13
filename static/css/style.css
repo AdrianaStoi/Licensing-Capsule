@@ -47,7 +47,7 @@ a {
     background-color: #aaebef;
 }
 
-/* Style About us section */
+/* Style About us section on the index page*/
 .aboutus-container {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -63,10 +63,14 @@ a {
 
 /*Style card product families*/
 .card-product-family {
-    background-color:#00008B;
-    color: #ffffff;
+    background-color: #00008B;
     border-radius: 1%;
 }
+
+.card-title {
+    color: #ffffff;
+}
+
 
 /*Style landing image container from the news.html page */
 .article-image-container {

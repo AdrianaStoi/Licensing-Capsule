@@ -77,35 +77,44 @@
     </div>
    
     <!--Most liked and commented articles-->
-    <div class="container mt-4">
+    <div class="container mt-4 mb-4">
         <div class="row">
-            <div class="col-md-6 mb-4">
+            
+            {% for article in most_liked_articles %}
+            <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="" class="card-img-top" alt="Illustration 1">
+                    <img src="https://res.cloudinary.com/dvplixxng/image/upload/{{ article.featured_image }}" class="card-img-top" alt="Illustration 1">
                     <div class="card-body">
-                        <h5 class="card-title"> Title</h5>
-                        <p class="card-text">Text here.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <i class="fa-brands fa-gratipay" style="color: #0074d9;"></i>
-                            <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i>
+                        <a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                        </a>
+                         <p class="card-text">{{ article.excerpt }}</p>
+                         <div class="d-flex justify-content-between align-items-center">
+                            <i class="fa-brands fa-gratipay" style="color: #0074d9;"></i> {{ article.likes_number }}
+                            <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i> {{ article.comments.count }}
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 mb-4">
+            {% endfor %}
+            
+            {% for article in most_commented_articles %}
+            <div class="col-md-4 mb-4"> 
                 <div class="card">
-                    <img src="" class="card-img-top" alt="Illustration 2">
+                    <img src="https://res.cloudinary.com/dvplixxng/image/upload/{{ article.featured_image }}" class="card-img-top" alt="Illustration 2">
                     <div class="card-body">
-                        <h5 class="card-title"> Title</h5>
-                        <p class="card-text">Text here.</p>
+                        <a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none">
+                        <h5 class="card-title"> {{ article.title }}</h5>
+                        </a>
+                        <p class="card-text">{{ article.excerpt }}</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <i class="fa-brands fa-gratipay" style="color: #0074d9;"></i>
-                            <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i>
+                            <i class="fa-brands fa-gratipay" style="color: #0074d9;"></i> {{ article.likes_number }}
+                            <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i> {{ article.comments.count }}
                         </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
