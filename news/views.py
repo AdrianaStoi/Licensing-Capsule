@@ -120,6 +120,7 @@ def editComment(request, comment_id):
             comment_form = CommentForm(request.POST, instance=comment)
             if comment_form.is_valid():
                 comment_form.save()
+                messages.success(request, 'You have edited the comment successfully.')
                 return redirect('singlearticle', slug=article_slug)
             else:
                 comment_form = CommentForm(instance=comment)
@@ -133,6 +134,7 @@ def deleteComment(request, comment_id):
     if request.method == 'POST':
         if request.user == comment.user:
             comment.delete()
+            messages.success(request, 'You have deleted the comment successfully.')
         return redirect('singlearticle', slug=article_slug)
 
     return render(request, 'confirmdeletecomment.html', {'comment':comment})
