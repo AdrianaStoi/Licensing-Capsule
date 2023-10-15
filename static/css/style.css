@@ -78,6 +78,13 @@ a {
     min-height: 400px;
 }
 
+.pagination-span {
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    color: #00008B;
+   
+}
+
 /*Style featured image from the singlearticle.html page */
 .featured-image-container {
     background-color: #00008B;

@@ -41,7 +41,7 @@ class ListArticle(generic.ListView):
         status=1).order_by('-created_on')
     template_name = 'news.html' 
     context_object_name = 'all_articles'
-    paginate_by = 5
+    paginate_by = 3
 
 class SingleArticle(View):
 

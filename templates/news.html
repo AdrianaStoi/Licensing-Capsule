@@ -21,18 +21,34 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="text-uppercase">All articles:</h2>
-                        {% for Article in all_articles %}
+                        {% for article in all_articles %}
 
-                        <a href="{% url 'singlearticle' Article.slug %}" class="text-decoration-none"><h3 class="mt-4">{{ Article.title }}</h3></a>
-                        <span class="mb-1 text-muted">{{Article.created_on|date:"F d, Y" }} at {{ Article.created_on|date:"H:i" }} | {{ Article.author }}</span>
-                        <p>{{ Article.excerpt|truncatewords:30 }}</p>
+                        <a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none"><h3 class="mt-4">{{ article.title }}</h3></a>
+                        <span class="mb-1 text-muted">{{ article.created_on|date:"F d, Y" }} at {{ article.created_on|date:"H:i" }} | {{ article.author }}</span>
+                        <p>{{ article.excerpt|truncatewords:30 }}</p>
 
                         {% endfor %}
+
+                        <!-- Pagination -->
+                        <span class="step-links d-flex justify-content-center pagination-span">
+                            <span class="current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}:
+                            </span>
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1" class="mx-2">&laquo; first</a>
+                                <a href="?page={{ page_obj.previous_page_number }}" class="mx-2">previous</a>
+                            {% endif %}
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}" class="mx-2">next</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}" class="mx-2">last &raquo;</a>
+                            {% endif %}
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </section>
 
 
