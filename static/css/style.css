@@ -33,7 +33,7 @@ nav.navbar img  {
     margin-left: 10px;
 }
 
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     color: #00008B;
@@ -152,6 +152,19 @@ i {
     .article-image-container{
         min-height: 300px;
     }
+}
+
+/* Style for most liked and commented section on index.html page on iPad Air*/
+@media (max-width: 820px) {
+    .most-liked-commented {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-top: var(--bs-gutter-y);
+    }
+
 }
 
 /* Style for landing image container from the news.html page on Surface Duo*/

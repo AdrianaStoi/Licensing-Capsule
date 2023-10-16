@@ -47,14 +47,14 @@
                                     {% else %}
                                     <span class="text-secondary" onclick="showModal('')"><i class="fa-brands fa-gratipay like-button" style="color: #0074d9;"></i></span>
                                     {% endif %}
-                                    <span class="text-secondary mr-2">{{ article.likes_number }}</span>
+                                    <span class="text-secondary ms-2 ">{{ article.likes_number }}</span>
                                 </strong>
                             </div>
-                            <div class="col-1 ml-3">
+                            <div class="col-1 ms-4">
                                 {% with comments.count as total_comments %}
                                 <strong class="text-secondary d-flex justify-content-between align-items-center">
-                                    <i class="fa-solid fa-comment-dots" style="color: #0074d9;"></i>
-                                    {{ total_comments}}
+                                    <i class="fa-solid fa-comment-dots icon-comments" style="color: #0074d9;"></i>
+                                    <span class="text-secondary ms-2"> {{ total_comments}} </span>
                                 </strong>
                                 {% endwith %}
                             </div>
@@ -84,11 +84,17 @@
         <div class="row">
             <div class="col-md-8 mt-3">
                 <h3>Comments:</h3>
-                <p>
-                    <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
-                    <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
-                    to like and leave a comment.
-                </p>
+                <!-- 
+                    Condition that checks if user is not authenticated,
+                    if this is the case, the user is encouraged to login or register.
+                -->
+                {% if not user.is_authenticated %}
+                    <p>
+                        <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
+                        <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
+                        to like and leave a comment.
+                    </p>
+                {% endif %}
                 <!--
                     Loop that iterates through comments 
                     and lists all comments displaying username, creation data and message. 
@@ -122,7 +128,7 @@
                     </div>
                     {% else %}
                     {% if user.is_authenticated %}
-                    
+
                     <h3>Leave a comment:</h3>
                     <p>Posting as: {{ user.username }}</p>
                     <form method="post" style="margin-top: 1.3em;">
