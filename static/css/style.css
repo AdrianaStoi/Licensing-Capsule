@@ -94,6 +94,16 @@ a {
     max-height: 500px;
 }
 
+/*Style modal singlearticle.html page*/
+.modal-body {
+    background-color: #aaebef;
+    font-weight: bolder;
+}
+
+.modal-content {
+    background-color: #ececec;
+}
+
 /*Style login, logout and register page */
 .btn-warning.btn-login-register {
     background-color: #aaebef;
@@ -102,7 +112,6 @@ a {
     color: #00008B;
     font-weight: bolder;
     font-size: large;
-
 }
 
 .text-register-login {
