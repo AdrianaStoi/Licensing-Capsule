@@ -46,11 +46,11 @@
                     <div class="card-body">
                         <h2 class="text-uppercase">Latest news:</h2>
 
-                        {% for Article in recent_articles %}
+                        {% for article in recent_articles %}
 
-                        <a href="{% url 'singlearticle' Article.slug %}" class="text-decoration-none"><h3 class= "mt-4 ">{{ Article.title }}</h3> </a>
-                        <span class="mb-1 text-muted">{{Article.created_on|date:"F d, Y" }} at {{ Article.created_on|date:"H:i" }} | {{ Article.author }}</span>
-                        <p>{{ Article.excerpt|truncatewords:30 }}</p>
+                        <a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none"><h3 class= "mt-4 ">{{ article.title }}</h3> </a>
+                        <span class="mb-1 text-muted">{{article.created_on|date:"F d, Y" }} at {{ article.created_on|date:"H:i" }} | {{ article.author }}</span>
+                        <p>{{ article.excerpt|truncatewords:30 }}</p>
 
                         {% endfor %}
                         
