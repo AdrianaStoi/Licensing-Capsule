@@ -5,6 +5,8 @@ from .models import Article, ProductFamily, Comment
 from django.db.models import Q, Count
 from .forms import CommentForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
@@ -43,7 +45,7 @@ class ListArticle(generic.ListView):
     context_object_name = 'all_articles'
     paginate_by = 3
 
-class SingleArticle(View):
+class SingleArticle(View, LoginRequiredMixin):
 
     def get (self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
@@ -109,9 +111,9 @@ class SearchArticle(generic.ListView):
         else:
             return Article.objects.none()
 
-
+@login_required
 def editComment(request, comment_id):
-    comment = get_object_or_404(Comment, pk=comment_id)
+    comment = get_object_or_404(Comment, pk=comment_id,user=request.user)
     comment_form = None
     article_slug= comment.article.slug
 
@@ -127,8 +129,9 @@ def editComment(request, comment_id):
                 
     return render(request, 'editcomment.html', {'comment_form':comment_form, 'comment':comment})
 
+@login_required
 def deleteComment(request, comment_id):
-    comment = get_object_or_404(Comment, pk=comment_id)
+    comment = get_object_or_404(Comment, pk=comment_id, user=request.user)
     article_slug= comment.article.slug
 
     if request.method == 'POST':
@@ -139,7 +142,7 @@ def deleteComment(request, comment_id):
 
     return render(request, 'confirmdeletecomment.html', {'comment':comment})
 
-class ArticleLike(View):
+class ArticleLike(View, LoginRequiredMixin):
 
     def post(self, request, slug, *args, **kwargs):
         article = get_object_or_404(Article, slug=slug)
