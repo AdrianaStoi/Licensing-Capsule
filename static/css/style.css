@@ -81,7 +81,6 @@ a {
     font-family: 'Exo', sans-serif;
     font-weight: 300;
     color: #00008B;
-   
 }
 
 /*Style featured image from the singlearticle.html page */
@@ -154,19 +153,6 @@ i {
     }
 }
 
-/* Style for most liked and commented section on index.html page on iPad Air*/
-@media (max-width: 820px) {
-    .most-liked-commented {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) * .5);
-        padding-left: calc(var(--bs-gutter-x) * .5);
-        margin-top: var(--bs-gutter-y);
-    }
-
-}
-
 /* Style for landing image container from the news.html page on Surface Duo*/
 @media (max-width: 540px) {
 
@@ -183,12 +169,22 @@ i {
     }
 }
 
-/* Style for logo image on Galaxy Fold*/
+/* Style for Galaxy Fold*/
 @media (max-width: 287px) {
 
+    /* Style for logo image*/
     nav.navbar img {
-        width: 160px;
-        height: 40px;
+        width: 150px;
+        height: 30px;
+    }
+
+    h2, h3, h4, h5 {
+        font-size: 20px;
+    }
+
+    /* Style pagination section from the news.html page */
+    .pagination-span {
+        font-size: 15px;
     }
 }
 
