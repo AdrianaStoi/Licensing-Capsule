@@ -79,20 +79,39 @@
                 </div>
             </div>
         </div>
+
+        <!--Comments section-->
         <div class="row">
             <div class="col-md-8 mt-3">
                 <h3>Comments:</h3>
+                <p>
+                    <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
+                    <a class="text-decoration-none text-register-login" href="{% url 'account_signup' %}">Register</a>
+                    to like and leave a comment.
+                </p>
+                <!--
+                    Loop that iterates through comments 
+                    and lists all comments displaying username, creation data and message. 
+                -->
                 <div class="card-body">
+                {% if comments %}
                     {% for comment in comments %}
                         <p class="fw-bold mt-3">{{ comment.user }}
                             <span class="fw-bold"> {{comment.created_on}}</span> wrote: 
                         </p>
                         {{ comment.message | linebreaks }}
+                        <!-- 
+                            Condition that checks if author of the comment is the user logged-in.
+                            Logged in users can edit and delete their own comments.
+                        -->
                         {% if comment.user == user %}
                             <button type="submit" class="btn btn-warning btn-lg mt-3"><a class="text-decoration-none" href="{% url 'editcomment' comment.id %}">Edit</a></button>
                             <a class="text-decoration-none" href="{% url 'confirmdeletecomment' comment.id %}"><button type="submit" class="btn btn-danger btn-lg mt-3">Delete</button></a>
                         {% endif %}
                     {% endfor %}
+                {% else %}
+                No comments yet.
+                {% endif %}
                 </div>
             </div>
             <div class="col-md-4 mt-3">
@@ -103,7 +122,7 @@
                     </div>
                     {% else %}
                     {% if user.is_authenticated %}
-
+                    
                     <h3>Leave a comment:</h3>
                     <p>Posting as: {{ user.username }}</p>
                     <form method="post" style="margin-top: 1.3em;">
