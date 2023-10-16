@@ -10,9 +10,9 @@
     <div class="card">
         <div class="card-body">
             <div class="mb-3">
-                <h2 class="card-title">{% trans "Log Out" %}</h2>
+                <h2 class="card-title text-register-login">{% trans "Log Out" %}</h2>
 
-                <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                <p>{% trans 'Are you sure you want to log out?' %}</p>
             </div>
             <div class="mb-3">
                 <form method="post" action="{% url 'account_logout' %}">
@@ -20,7 +20,7 @@
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                     {% endif %}
-                    <button class="btn btn-warning btn-login-register" type="submit">{% trans 'Sign Out' %}</button>
+                    <button class="btn btn-warning btn-login-register" type="submit">{% trans 'Log Out' %}</button>
                 </form>
             </div>
         </div>

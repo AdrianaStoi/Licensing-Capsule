@@ -59,7 +59,7 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item login-register">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Hi {{ user.username }}, Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item login-register">
