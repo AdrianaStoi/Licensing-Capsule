@@ -10,11 +10,11 @@
                     <div class="card-body">
                         <h2 class="text-uppercase">Article Search Results:</h2>
                         {% if search_articles %}
-                            {% for Article in search_articles %}
+                            {% for article in search_articles %}
 
-                            <h3 class="mt-4"><a href="{% url 'singlearticle' Article.slug %}" class="text-decoration-none">{{ Article.title }}</a></h3>
-                            <span class="mb-1 text-muted">{{Article.created_on|date:"F d, Y" }} at {{ Article.created_on|date:"H:i" }} | {{ Article.author }}</span>
-                            <p>{{ Article.excerpt|truncatewords:30 }}</p>
+                            <h3 class="mt-4"><a href="{% url 'singlearticle' article.slug %}" class="text-decoration-none">{{ article.title }}</a></h3>
+                            <span class="mb-1 text-muted">{{article.created_on|date:"F d, Y" }} at {{ article.created_on|date:"H:i" }} | {{ article.author }}</span>
+                            <p>{{ article.excerpt|truncatewords:30 }}</p>
 
                             {% endfor %}
                         {% else %}
