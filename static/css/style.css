@@ -125,13 +125,10 @@ input[type=text], input[type=password] {
     border: 2px solid #7d8080;
 }
 
-.container.height-custom-container { 
-    height: 80vh !important;
-}
-
-/* Style for container on article results 
+/* Style for container on login, lgout, register 
+   and on article results 
    on search and product by family page */
-.results-container {
+.custom-container {
     display:flex;
     flex-direction: column;
     min-height: 100vh;
