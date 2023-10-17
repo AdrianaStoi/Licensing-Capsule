@@ -19,10 +19,11 @@ if os.path.isfile('env.py'):
     import env
 
 cloudinary.config(
-    cloud_name=os.environ.get("cloud_name"),
+    cloud_name=("cloud_name"),
     api_key=os.environ.get("api_key"),
     api_secret=os.environ.get("api_secret")
 )
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
