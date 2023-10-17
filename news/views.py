@@ -11,6 +11,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class RecentArticle(generic.ListView):
+    """
+    This view lists 3 of the most recent articles.
+    It includes also an extra_context 
+    that lists all Product Family names.
+    """
     model = Article
     queryset = Article.objects.filter(
         status=1).order_by('-created_on')[:3]
@@ -19,6 +24,11 @@ class RecentArticle(generic.ListView):
     extra_context = {"product_family": ProductFamily.objects.all()}
     
     def get_context_data(self, **kwargs):
+        """
+        The function will count likes and comments 
+        and display 2 of the most liked articles 
+        and 1 of the most comment article. 
+        """
         context = super().get_context_data(**kwargs)
 
         most_liked_articles = Article.objects.annotate(like_count = Count('likes')).order_by('-like_count')[:2]
@@ -29,6 +39,9 @@ class RecentArticle(generic.ListView):
         return context
 
 class ArticlesByProductFamily(generic.ListView):
+    """
+    This view will display the articles by product name. 
+    """
     model = Article
     template_name = 'productfamily.html'
     context_object_name = 'articles'
@@ -38,6 +51,10 @@ class ArticlesByProductFamily(generic.ListView):
         return Article.objects.filter(product_name=product_id, status=1).order_by('-created_on')
 
 class ListArticle(generic.ListView):
+    """
+    This view will display all articles available on the site
+    paginate by 3 articles.
+    """
     model = Article
     queryset = Article.objects.filter(
         status=1).order_by('-created_on')
@@ -46,7 +63,10 @@ class ListArticle(generic.ListView):
     paginate_by = 3
 
 class SingleArticle(View, LoginRequiredMixin):
-
+    """
+    This view will display a single article with status 1-'Published'.
+    It will also display the approved comments and likes. 
+    """
     def get (self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
@@ -68,7 +88,12 @@ class SingleArticle(View, LoginRequiredMixin):
         )
 
     def post(self, request, slug, *args, **kwargs):
-
+        """
+        This method invoked when a POST request is initiated 
+        on the view through the comment form 
+        The comment form is displayed
+        when user is logged in.
+        """
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
         comments = article.comments.filter(approved=True).order_by("-created_on")
@@ -100,6 +125,10 @@ class SingleArticle(View, LoginRequiredMixin):
         )
 
 class SearchArticle(generic.ListView):
+    """
+    This view will search by the query input 
+    and list articles if any available.
+    """
     model = Article
     template_name = 'search.html'
     context_object_name = 'search_articles'
@@ -113,6 +142,11 @@ class SearchArticle(generic.ListView):
 
 @login_required
 def editComment(request, comment_id):
+    """
+    This function will allow comment owner 
+    to edit their comment and save it.
+    User must be logged in to access it.
+    """
     comment = get_object_or_404(Comment, pk=comment_id,user=request.user)
     comment_form = None
     article_slug= comment.article.slug
@@ -131,6 +165,11 @@ def editComment(request, comment_id):
 
 @login_required
 def deleteComment(request, comment_id):
+    """
+    This function will allow comment owner 
+    to delete their comment and save it.
+    User must be logged in to access it.
+    """
     comment = get_object_or_404(Comment, pk=comment_id, user=request.user)
     article_slug= comment.article.slug
 
@@ -143,7 +182,10 @@ def deleteComment(request, comment_id):
     return render(request, 'confirmdeletecomment.html', {'comment':comment})
 
 class ArticleLike(View, LoginRequiredMixin):
-
+    """
+    This view will allow logged in users to  
+    like or unlike an article.
+    """
     def post(self, request, slug, *args, **kwargs):
         article = get_object_or_404(Article, slug=slug)
 

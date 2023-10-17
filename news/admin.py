@@ -5,7 +5,9 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Article)
 class ArticleAdmin(SummernoteModelAdmin):
-
+    """
+    This class allows admin to manage articles on the admin panel.
+    """
     list_display = ('title', 'slug',
                     'status', 'created_on', 'updated_on')
     prepopulated_fields = {'slug': ('title',)}
@@ -16,7 +18,9 @@ class ArticleAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-
+    """
+    This class allows admin to manage comments on the admin panel.
+    """
     list_display = ('user', 'message', 'article',
                     'created_on', 'updated_on', 'approved')
     list_filter = ('approved', 'created_on')
@@ -29,5 +33,8 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(ProductFamily)
 class ProductFamilyAdmin(admin.ModelAdmin):
-
+    """
+    This class allows admin to manage Product Family on the admin panel.
+    It displays the product name, creation date and update date.
+    """
     list_display = ('product_name', 'created_at', 'updated_at')
