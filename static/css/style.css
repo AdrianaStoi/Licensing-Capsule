@@ -125,7 +125,7 @@ input[type=text], input[type=password] {
     border: 2px solid #7d8080;
 }
 
-.container.vh-100 {
+.container.height-custom-container { 
     height: 80vh !important;
 }
 

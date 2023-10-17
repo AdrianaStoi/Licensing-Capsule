@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from django.views.defaults import page_not_found
+
 
 urlpatterns = [
     path("", views.RecentArticle.as_view(), name="home"),
@@ -12,5 +12,4 @@ urlpatterns = [
     path("deletecomment/<int:comment_id>", views.deleteComment, name="deletecomment"),
     path("confirmdeletecomment/<int:comment_id>", views.deleteComment, name="confirmdeletecomment"),
     path("like/<slug:slug>", views.ArticleLike.as_view(), name="articlelike"),
-    path("<path:path>", page_not_found, name="page_not_found"),
 ]
