@@ -4,6 +4,7 @@
 
 {% load crispy_forms_tags %}
 
+<!--Landing featured-image-->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12 featured-image-container d-flex justify-content-center align-items-center">
@@ -58,6 +59,8 @@
                                 </strong>
                                 {% endwith %}
                             </div>
+
+                            <!--Modal displaying when clicking on like icon if user is not logged in-->
                             <div id="login-modal" class="modal" tabindex="-1">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
@@ -73,7 +76,7 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -84,10 +87,6 @@
         <div class="row">
             <div class="col-md-8 mt-3">
                 <h3>Comments:</h3>
-                <!-- 
-                    Condition that checks if user is not authenticated,
-                    if this is the case, the user is encouraged to login or register.
-                -->
                 {% if not user.is_authenticated %}
                     <p>
                         <a class="text-decoration-none text-register-login" href="{% url 'account_login' %}">Login</a> or 
@@ -95,10 +94,8 @@
                         to like and leave a comment.
                     </p>
                 {% endif %}
-                <!--
-                    Loop that iterates through comments 
-                    and lists all comments displaying username, creation data and message. 
-                -->
+
+                <!--Comments details and body-->
                 <div class="card-body">
                 {% if comments %}
                     {% for comment in comments %}
@@ -106,10 +103,6 @@
                             <span class="fw-bold"> {{comment.created_on}}</span> wrote: 
                         </p>
                         {{ comment.message | linebreaks }}
-                        <!-- 
-                            Condition that checks if author of the comment is the user logged-in.
-                            Logged in users can edit and delete their own comments.
-                        -->
                         {% if comment.user == user %}
                             <button type="submit" class="btn btn-warning btn-lg mt-3"><a class="text-decoration-none" href="{% url 'editcomment' comment.id %}">Edit</a></button>
                             <a class="text-decoration-none" href="{% url 'confirmdeletecomment' comment.id %}"><button type="submit" class="btn btn-danger btn-lg mt-3">Delete</button></a>
@@ -120,6 +113,8 @@
                 {% endif %}
                 </div>
             </div>
+            
+            <!--Comments form available if user is authenticated and alert success message.-->
             <div class="col-md-4 mt-3">
                 <div class="class-body">
                     {% if commented %}
