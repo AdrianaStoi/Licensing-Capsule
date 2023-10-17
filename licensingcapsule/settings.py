@@ -40,6 +40,9 @@ ALLOWED_HOSTS = ['licensing-capsule-55f92c8ddd11.herokuapp.com',
                  '8000-adrianastoi-licensing-ca-b6nwnr8fzy.us2.codeanyapp.com']
 
 DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 # Application definition
 
 INSTALLED_APPS = [

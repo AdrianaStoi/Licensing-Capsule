@@ -126,7 +126,7 @@ input[type=text], input[type=password] {
 }
 
 .container.vh-100 {
-    height: 75vh !important;
+    height: 80vh !important;
 }
 
 /*Style register page */
