@@ -43,7 +43,6 @@ a {
     color: #00008B;
 }
 
-
 .landing-div {
     background-color: #aaebef;
 }
@@ -151,6 +150,7 @@ i {
     font-size: 25px;
 }
 
+/* Media queries for device max-width 991px */
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
@@ -163,7 +163,7 @@ i {
         border: none;
     }
 
-    .article-image-container{
+    .article-image-container {
         min-height: 300px;
     }
 }
@@ -171,7 +171,7 @@ i {
 /* Style for landing image container from the news.html page on Surface Duo*/
 @media (max-width: 540px) {
 
-    .article-image-container{
+    .article-image-container {
         min-height: 250px;
     }
 }
@@ -179,7 +179,7 @@ i {
 /* Style for landing image container from the news.html page on Samsung Galaxy S20 Ultra*/
 @media (max-width: 412px) {
 
-    .article-image-container{
+    .article-image-container {
         min-height: 170px;
     }
 }
