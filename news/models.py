@@ -4,6 +4,7 @@ from cloudinary.models import CloudinaryField
 
 
 class ProductFamily(models.Model):
+    """Model for Product Family"""
     product_name = models.CharField(max_length=100, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -19,6 +20,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Article(models.Model):
+    """Model for Article"""
     title = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
     author = models.ForeignKey(
@@ -44,6 +46,7 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
+    """Model for Comment"""
     article = models.ForeignKey(
         Article, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
