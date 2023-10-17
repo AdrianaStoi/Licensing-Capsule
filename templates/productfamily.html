@@ -3,7 +3,7 @@
 {% block content %}
 
 <section>
-    <div class="container vh-100 mt-4 mb-4">
+    <div class="container results-container mt-4 mb-4">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
@@ -20,6 +20,7 @@
                         {% else %}
                             <p> No articles found.</p>
                         {% endif %}
+                        <a href="{% url 'home' %}" class="btn btn-warning fw-bold mt-2 mb-2"> Back to Home</a>
                     </div>
                 </div>
             </div>

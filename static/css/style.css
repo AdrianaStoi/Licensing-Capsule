@@ -129,6 +129,14 @@ input[type=text], input[type=password] {
     height: 80vh !important;
 }
 
+/* Style for container on article results 
+   on search and product by family page */
+.results-container {
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /*Style register page */
 .register-card{
     min-width: 70%;
