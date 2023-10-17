@@ -16,7 +16,7 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 import cloudinary
 if os.path.isfile('env.py'):
-    import env
+   import env
 
 cloudinary.config(
     cloud_name=("cloud_name"),
@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['licensing-capsule-55f92c8ddd11.herokuapp.com',
                  '8000-adrianastoi-licensing-ca-b6nwnr8fzy.us2.codeanyapp.com']
 
-DEBUG = True
+DEBUG = False
 # Application definition
 
 INSTALLED_APPS = [
@@ -171,7 +171,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-#STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
