@@ -14,15 +14,15 @@ Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
 
 ### The goal of the site owner
 
-Keep the audience and potential users up to date with the latest Microsoft license terms.  Clarify the world of Microsoft licensing, providing valuable insights and updates.
+* Keep the audience and potential users up to date with the latest Microsoft license terms.  Clarify the world of Microsoft licensing, providing valuable insights and updates.
 
 ### The goal of the external user
 
-Users’ scope is to stay informed about the latest Microsoft licensing developments and license terms. To be able to engage with the content and provide valuable feedback and comments. Users want to benefit from valuable insights and updates to enhance their understanding of Microsoft licensing.
+* Users’ scope is to stay informed about the latest Microsoft licensing developments and license terms. To be able to engage with the content and provide valuable feedback and comments. Users want to benefit from valuable insights and updates to enhance their understanding of Microsoft licensing.
 
 ### User stories:
 
-There were created 9 EPICs which were developed into 23 User stories:
+* There were created 9 EPICs which were developed into 23 User stories:
 
 #### EPIC: Site administration
 
@@ -86,14 +86,38 @@ The user stories below were not implemented in the project due to time constrain
 
 ### Design, colors and typography
 
-Throughout the site, there were illustrations picturing cloud computing, software, corporations and various technology elements. 
+* Throughout the site, there were illustrations picturing cloud computing, software, corporations and various technology elements.
 
-The colour palette chosen was mainly shades of blue, grey and orange. Blue was the dominant color choice, which aligns with the conventions of technology-related websites and gives users a sense of familiarity.
+* The colour palette chosen was mainly shades of blue, grey and orange. Blue was the dominant color choice, which aligns with the conventions of technology-related websites and gives users a sense of familiarity.
 
-* Color used for the body-background: #ececec
-* The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the ‘News’ page.
-* The color choice for the nvagation bar, Login, Register was #aaebef, selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme.
+  * Color used for the body-background: #ececec
+  * The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the ‘News’ page.
+  * The color choice for the nvagation bar, Login, Register was #aaebef, selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme.
 
-Google fonts ‘Alegreya Sans’ and ‘Exo’ were used. Specifically, ‘Exo’ was employed for headings, navbar and buttons and ‘Alegreya Sans’ was chosen for paragraphs.
+* Google fonts ‘Alegreya Sans’ and ‘Exo’ were used. Specifically, ‘Exo’ was employed for headings, navbar and buttons and ‘Alegreya Sans’ was chosen for paragraphs.
 
-The reason ‘Exo’ font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing ‘EXO’ font and ‘Alegreya Sans’ is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
+* The reason ‘Exo’ font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing ‘EXO’ font and ‘Alegreya Sans’ is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
+
+* Sans Serif font was used as alternative font.
+
+## Wireframes and Database schema
+
+### Wireframe
+
+* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found here: [Licenisng Capsule-Wireframes]() 
+* The layout of the site has changed throughout the project development due to time constraints. As a result, some of the features originally outlined in the wireframe as the User Profile page are to be implemented in the future.
+
+
+### Database schema
+
+* In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram. The diagram is available [here - Licenisng Capsule - Database Diagram]().
+
+* I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three custom models Article, Product Family and Comment and I used Allauth library for the user authentication system.
+
+* For the author/admin to create an article the custom model ‘Article’ was required.  In this model, the article author is represented as a Foreign Key, which means that each article is associated with a single author.
+  
+* The ‘Comment’ model enables logged in users to comment on articles. In this case, the ‘Article’ custom model is linked as a Foreign Key ensuring that each comment is associated with a specific article.  Also, the ‘User’ built in model serves as a Foreign Key, as each comment is attributed to a single user.
+  
+* A third ‘Product Family’ custom model was created to classify articles in specific groups. This custom model is established as a Many-to-Many relationship with the Article model, allowing multiple articles to be associated with a single Product Family.
+
+
