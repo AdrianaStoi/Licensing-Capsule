@@ -83,3 +83,17 @@ The user stories below were not implemented in the project due to time constrain
 
 21. As a user on the site I can save articles in my profile so that I can easily access them at any time.
 22. As a registered user on the site I can share articles on social media directly from the site so that I can easily share insights with other users, promote the site and support the content creator.
+
+### Design, colors and typography
+
+Throughout the site, there were illustrations picturing cloud computing, software, corporations and various technology elements. 
+
+The colour palette chosen was mainly shades of blue, grey and orange. Blue was the dominant color choice, which aligns with the conventions of technology-related websites and gives users a sense of familiarity.
+
+* Color used for the body-background: #ececec
+* The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the ‘News’ page.
+* The color choice for the nvagation bar, Login, Register was #aaebef, selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme.
+
+Google fonts ‘Alegreya Sans’ and ‘Exo’ were used. Specifically, ‘Exo’ was employed for headings, navbar and buttons and ‘Alegreya Sans’ was chosen for paragraphs.
+
+The reason ‘Exo’ font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing ‘EXO’ font and ‘Alegreya Sans’ is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
