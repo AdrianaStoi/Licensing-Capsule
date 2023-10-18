@@ -114,10 +114,15 @@ The user stories below were not implemented in the project due to time constrain
 
 * I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three custom models Article, Product Family and Comment and I used Allauth library for the user authentication system.
 
-* For the author/admin to create an article the custom model ‘Article’ was required.  In this model, the article author is represented as a Foreign Key, which means that each article is associated with a single author.
+* For the author/admin to create an article the custom model "Article" was required.  In this model, the article author is represented as a Foreign Key, which means that each article is associated with a single author.
   
-* The ‘Comment’ model enables logged in users to comment on articles. In this case, the ‘Article’ custom model is linked as a Foreign Key ensuring that each comment is associated with a specific article.  Also, the ‘User’ built in model serves as a Foreign Key, as each comment is attributed to a single user.
+* The "Comment" model enables logged in users to comment on articles. In this case, the "Article" custom model is linked as a Foreign Key ensuring that each comment is associated with a specific article.  Also, the "User" built in model serves as a Foreign Key, as each comment is attributed to a single user.
   
-* A third ‘Product Family’ custom model was created to classify articles in specific groups. This custom model is established as a Many-to-Many relationship with the Article model, allowing multiple articles to be associated with a single Product Family.
+* A third "Product Family" custom model was created to classify articles in specific groups. This custom model is established as a Many-to-Many relationship with the Article model, allowing multiple articles to be associated with a single Product Family.
 
+## Agile Methodology
 
+* Github Project was utilized to manage the development process using an agile methodology. The link to the Project Kanban board can be accessed here.
+* For each user story I created a Github Issue which includes the EPIC, Acceptance Criteria and Tasks.
+* Each User Story comes with defined acceptance criteria, ensuring a clear understanding of when the User Story can be considered completed. These acceptance criteria are subdivided into tasks, making it easier to execute the User Story.
+* The User stories were categorized according to the MoSCoW prioritization technique from highest to lowest: "Should Have" "Must Have" "Could Have" and "Won't Have". They were assigned to Milestones that corresponded to the Sprints cycles of the project.
