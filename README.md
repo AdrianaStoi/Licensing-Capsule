@@ -104,13 +104,12 @@ The user stories below were not implemented in the project due to time constrain
 
 ### Wireframe
 
-* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found here: [Licensing Capsule-Wireframes]() 
+* I used Balsamiq Wireframes to create the wireframes for the site layout. The wireframe can be found here: [Licensing Capsule-Wireframes](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_wireframes.pdf) 
 * The layout of the site has changed throughout the project development due to time constraints. As a result, some of the features originally outlined in the wireframe as the User Profile page are to be implemented in the future.
-
 
 ### Database schema
 
-* In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram. The diagram is available [here - Licensing Capsule - Database Diagram]().
+* In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram. The diagram is available [here - Licensing Capsule - Database Diagram](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_database_er_diagram.pdf).
 
 * I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three custom models Article, Product Family and Comment and I used Allauth library for the user authentication system.
 
@@ -119,6 +118,8 @@ The user stories below were not implemented in the project due to time constrain
 * The "Comment" model enables logged in users to comment on articles. In this case, the "Article" custom model is linked as a Foreign Key ensuring that each comment is associated with a specific article.  Also, the "User" built in model serves as a Foreign Key, as each comment is attributed to a single user.
   
 * A third "Product Family" custom model was created to classify articles in specific groups. This custom model is established as a Many-to-Many relationship with the Article model, allowing multiple articles to be associated with a single Product Family.
+
+ ![Licensing Capsule - Database Diagram](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/licensing_capsule_lucid_diagram.png)
 
 ## Agile Methodology
 
