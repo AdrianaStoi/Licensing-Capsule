@@ -91,12 +91,12 @@ The user stories below were not implemented in the project due to time constrain
 * The colour palette chosen was mainly shades of blue, grey and orange. Blue was the dominant color choice, which aligns with the conventions of technology-related websites and gives users a sense of familiarity.
 
   * Color used for the body-background: #ececec
-  * The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the ‘News’ page.
+  * The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the "News" page.
   * The color choice for the nvagation bar, Login, Register was #aaebef, selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme.
 
-* Google fonts ‘Alegreya Sans’ and ‘Exo’ were used. Specifically, ‘Exo’ was employed for headings, navbar and buttons and ‘Alegreya Sans’ was chosen for paragraphs.
+* Google fonts "Alegreya Sans" and "Exo" were used. Specifically, "Exo" was employed for headings, navbar and buttons and "Alegreya Sans" was chosen for paragraphs.
 
-* The reason ‘Exo’ font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing ‘EXO’ font and ‘Alegreya Sans’ is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
+* The reason "Exo" font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing "EXO" font and "Alegreya Sans" is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
 
 * Sans Serif font was used as alternative font.
 
@@ -104,13 +104,13 @@ The user stories below were not implemented in the project due to time constrain
 
 ### Wireframe
 
-* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found here: [Licenisng Capsule-Wireframes]() 
+* I used Balsamiq Wireframes to create the wireframes for site layout. The wireframe can be found here: [Licensing Capsule-Wireframes]() 
 * The layout of the site has changed throughout the project development due to time constraints. As a result, some of the features originally outlined in the wireframe as the User Profile page are to be implemented in the future.
 
 
 ### Database schema
 
-* In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram. The diagram is available [here - Licenisng Capsule - Database Diagram]().
+* In order to create and plan the databse structure, I used [Lucidchart](https://www.lucidchart.com/pages/) to create a Database ER diagram. The diagram is available [here - Licensing Capsule - Database Diagram]().
 
 * I applied Object-Oriented Programming principles in the project, along with Django’s Class-based generic views. I created three custom models Article, Product Family and Comment and I used Allauth library for the user authentication system.
 
@@ -122,7 +122,7 @@ The user stories below were not implemented in the project due to time constrain
 
 ## Agile Methodology
 
-* Github Project was utilized to manage the development process using an agile methodology. The link to the Project Kanban board can be accessed here.
+* Github Project was utilized to manage the development process using an agile methodology. The link to the Project Kanban board can be accessed [here-Licensing Capsule User Stories](https://github.com/users/AdrianaStoi/projects/2/views/1).
 * For each user story I created a Github Issue which includes the EPIC, Acceptance Criteria and Tasks.
 * Each User Story comes with defined acceptance criteria, ensuring a clear understanding of when the User Story can be considered completed. These acceptance criteria are subdivided into tasks, making it easier to execute the User Story.
-* The User stories were categorized according to the MoSCoW prioritization technique from highest to lowest: "Should Have" "Must Have" "Could Have" and "Won't Have". They were assigned to Milestones that corresponded to the Sprints cycles of the project.
+* The User stories were categorized according to the MoSCoW prioritization technique from highest to lowest: "Must Have", "Should Have", "Could Have" and "Won't Have". They were assigned to Milestones that corresponded to the Sprints cycles of the project.
