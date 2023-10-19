@@ -286,7 +286,7 @@ Under this image all articles are listed, but only three articles are visible at
 Once they are registered, they are logged in. They are prompted with a success message alert.
 
 ![Register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/register_page.png)
-![Successfull signed in after registration]()
+![Successfully signed in after registration]()
 
 ### Error pages
 
@@ -297,3 +297,4 @@ Once they are registered, they are logged in. They are prompted with a success m
 * 500 Server Error – “Licensing Capsule is currently unable to handle this request.”
 
 ![404 Page not Found]()
+![500 Server Error]()
