@@ -235,7 +235,7 @@ Under this image all articles are listed, but only three articles are visible at
 
 * If no comments are available, there is stated “No comments yet.”
 
-![Comments section -no comments yet]()
+![Comments section -no comments yet](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_no_comments_yet.png)
 
 * When a user is logged in, they have the option to submit a comment using a comment form. After sending a comment, they will be prompted with the message “Your message is waiting approval.” Comments submitted by users need to be approved by the admin before they are displayed in the comment section.
 
@@ -258,3 +258,34 @@ Under this image all articles are listed, but only three articles are visible at
 ![Delete comment page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_deletion_confirmation_page.png)
 
 ![Delete comment successfully](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_successul_message_comment_deletion.png)
+
+### Login page
+
+* On the login page the user is asked to enter their username and password. If the user is not registered yet, they can click on “Register”.
+* When user enters a wrong username or password, they are prompted with the message “The username and/or password you specified are not correct.”
+
+![Login page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/login_page.png)
+
+![Password incorrect]()
+
+### Logged in user
+
+* When users are logged in, at the top right corner their user name is displayed and they have the Logout button.
+
+![Login navbar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/navbar_user_logged_in.png)
+
+### Logout page
+
+* When clicking on logout, users are redirected to a page that asks them to confirm their intention to  log out. This step helps ensure that users do not accidentally log out and asks for them to confirm this action before proceeding.
+
+![Logout page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/logout_page.png)
+
+### Register Page
+
+On the register page, users are asked to enter their name, email (optional field) and create a password:
+Once they are registered, they are logged in. They are prompted with a success message alert.
+
+![Register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/register_page.png)
+![Successfull registration]()
+
+### Error pages
