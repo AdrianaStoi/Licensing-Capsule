@@ -326,6 +326,9 @@ Once they are registered, they are logged in. They are prompted with a success m
 * [Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the databse structure. The diagram is available [here - Licensing Capsule - Database Diagram](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_database_er_diagram.pdf).
 * [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE) was used to create the wireframes for site layout. The wireframe can be found [here:Licensing Capsule-Wireframes](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_wireframes.pdf)
 
+## Testing
+Testing and results can be found in the TESTING.md file [here]().
+
 ## Deployment
 
 ### Codeanywhere
