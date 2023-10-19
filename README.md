@@ -127,3 +127,14 @@ The user stories below were not implemented in the project due to time constrain
 * For each user story I created a Github Issue which includes the EPIC, Acceptance Criteria and Tasks.
 * Each User Story comes with defined acceptance criteria, ensuring a clear understanding of when the User Story can be considered completed. These acceptance criteria are subdivided into tasks, making it easier to execute the User Story.
 * The User stories were categorized according to the MoSCoW prioritization technique from highest to lowest: "Must Have", "Should Have", "Could Have" and "Won't Have". They were assigned to Milestones that corresponded to the Sprints cycles of the project.
+
+## Features
+
+### Existing features
+
+#### Navigation Bar
+
+* The navigation Bar is present on all site pages. It is a fully responsive navigation bar which includes the links for easy user navigation to the “Home”, “News”, “Login” and “Register” page. When users click on the “Licensing Capsule” logo they will be directed to the “Home” page.
+
+* With this feature the user can navigate from page to page and does not have to use back to revert to the previous page. The navigation bar can be used on all device types: desktop, tablet, and smartphones.
+
