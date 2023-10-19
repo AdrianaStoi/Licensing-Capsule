@@ -241,7 +241,7 @@ Under this image all articles are listed, but only three articles are visible at
 
 ![Comment form](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_leave_comment.png)
 
-![Comment submitted waiting for approval]()
+![Comment submitted waiting for approval](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/comment_waiting_approval.png)
 
 * Once the comment is approved, it will appear in the comment section, and the logged-in user will have the ability to “Edit” or “Delete” their comment.
 
@@ -249,5 +249,12 @@ Under this image all articles are listed, but only three articles are visible at
 
 * When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page and they are be prompted with a success message alert that automatically dismisses after 5 seconds.
 
+![Edit comment page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_edit_comment.png)
+
+![Edit comment successfully](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_successful_edit_comment.png)
+
 * When deleting a comment, the user is prompted with a confirmation message to confirm the deletion. After confirming, the comment will be deleted. They are redirected to the previous page and they are prompted with a success message alert that automatically dismisses after 5 seconds.
 
+![Delete comment page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_deletion_confirmation_page.png)
+
+![Delete comment successfully](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_successul_message_comment_deletion.png)
