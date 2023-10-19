@@ -128,9 +128,9 @@ The user stories below were not implemented in the project due to time constrain
 * Each User Story comes with defined acceptance criteria, ensuring a clear understanding of when the User Story can be considered completed. These acceptance criteria are subdivided into tasks, making it easier to execute the User Story.
 * The User stories were categorized according to the MoSCoW prioritization technique from highest to lowest: "Must Have", "Should Have", "Could Have" and "Won't Have". They were assigned to Milestones that corresponded to the Sprints cycles of the project.
 
-## Features
+## Existing Features
 
-### Existing features
+### Home page
 
 #### Navigation Bar
 
@@ -192,3 +192,17 @@ The user stories below were not implemented in the project due to time constrain
 
 ![Footer image](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_footer.png)
 
+### News page
+
+#### Landing image
+
+On the news page, the user will encounter a new corporate illustration with a blue background, aligning with the site’s color palette.
+Under this image all articles are listed, but only three articles are visible at a time.
+
+![Landing image - news page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/news_landing_page.png)
+
+#### All articles
+
+Below the list of the three articles, there is the pagination feature that displays the total number of available pages and provides users with the option to navigate to the next or last page. This allows users to easily access and browse through the entire site collection.  
+
+![All articles -news page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/news_all_articles_and_pagination.png)
