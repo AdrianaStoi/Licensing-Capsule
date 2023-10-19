@@ -326,3 +326,52 @@ Once they are registered, they are logged in. They are prompted with a success m
 * [Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the databse structure. The diagram is available [here - Licensing Capsule - Database Diagram](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_database_er_diagram.pdf).
 * [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE) was used to create the wireframes for site layout. The wireframe can be found [here:Licensing Capsule-Wireframes](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_wireframes.pdf)
 
+## Deployment
+
+###
+
+###
+
+
+## Credits
+
+* I used [Code Institute - Template](https://github.com/Code-Institute-Org/ci-full-template) for the deployable application.
+* Fonts were taken from [Google Fonts](https://fonts.google.com/)
+* Font Pairing suggestion was taken from [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20such)
+* The icons in the footer were sourced from [Font Awesome](https://fontawesome.com/)
+* To create diagram for custom modelI used [Lucidchart](https://www.lucidchart.com/pages/)
+* To create the wireframes I used [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE)
+* For logo creation I used the site [Logo](https://logo.com/)
+
+### Tutorials
+
+* The [Code Institute Django Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) walkthrough served as a foundation and I adapted and customized it accordingly
+* To edit and delete comments I used as source the [Todo CI walkthrough](https://github.com/ckz8780/ci-fsf-hello-django/blob/c13b414fd2e87a54b4f2788ceffec55be4ade925/todo/views.py)
+* To add pagination I used the code for pagination from [Django Project site](https://docs.djangoproject.com/en/4.2/topics/pagination/).
+* In order to created the function and display the 3 latest articles on the home page, I used as guidance the [Stackflow thread](https://stackoverflow.com/questions/23928866/only-show-the-latest-3-posts-in-django) 
+* For search view I used as source and inspiration the project blog created by [Rathan Kumar](https://github.com/dev-rathankumar/django-blog/blob/main/blogs/views.py) and customized accordingly.
+* For creating query for most likes and most commented articles and display them, I used the [Stackflow thread](https://stackoverflow.com/questions/68575418/django-sort-posts-by-comments-count?rq=3) and I customized it accordingly.
+
+### Images and content
+
+#### Content
+
+* Articles were written based on official information from Microsoft Product Terms licensing sites and blogs: 
+
+* [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/product/changes/EAEAS)
+* [New subscription structure for Microsoft 365 in Europe](https://www.microsoft.com/en-us/licensing/news/Microsoft365-Teams-EEA)
+* [Microsoft announces changes to Microsoft 365 and Office 365 to address European competition concerns](https://blogs.microsoft.com/eupolicy/2023/08/31/european-competition-teams-office-microsoft-365/ )
+* [Dynamics 365 Customer Insights FAQs](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/ci-faq)
+* [Microsoft launches Power Automate Process Mining and next-generation AI](https://cloudblogs.microsoft.com/powerplatform/2023/07/18/microsoft-launches-power-automate-process-mining-and-next-generation-ai/)
+* [Microsoft Dev Box is now generally available](https://azure.microsoft.com/en-us/updates/microsoft-dev-box-is-now-generally-available/)
+
+#### Images
+
+* Illustrations were taken from [Shutterstock](https://www.shutterstock.com/) and [Istockphoto](https://www.istockphoto.com/de):
+
+* [Photo credits:Sorbetto](https://www.istockphoto.com/de/vektor/gesch%C3%A4ftsleute-arbeiten-online-zusammen-gm1421764550-467289983)
+* [Illustration by Graphic farm](https://www.shutterstock.com/image-vector/business-technology-storage-cloud-computing-service-1715236615)
+* [Illustration by MPetrovskaya](https://www.shutterstock.com/image-vector/set-vector-illustrations-flat-cartoon-characters-1892882557)
+* [Illustration by AlisaRut](https://www.shutterstock.com/image-illustration/call-center-custome-support-technical-service-1910982568)
+* [Illustration by TuGuDesign](https://www.shutterstock.com/image-vector/top-view-office-workplace-2122215641)
+* [Illustration by Designsells](https://www.shutterstock.com/image-illustration/violet-concept-marketing-people-scene-flat-2256240047)
