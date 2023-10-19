@@ -266,7 +266,7 @@ Under this image all articles are listed, but only three articles are visible at
 
 ![Login page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/login_page.png)
 
-![Password incorrect]()
+![Password incorrect](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/login_incorrect_password.png)
 
 ### Logged in user
 
@@ -286,7 +286,7 @@ Under this image all articles are listed, but only three articles are visible at
 Once they are registered, they are logged in. They are prompted with a success message alert.
 
 ![Register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/register_page.png)
-![Successfully signed in after registration]()
+![Successfully signed in after registration](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/register_successful_logged_in.png)
 
 ### Error pages
 
@@ -296,5 +296,5 @@ Once they are registered, they are logged in. They are prompted with a success m
 * 403 Forbidden – “You are not authorized to perform the requested action.”
 * 500 Server Error – “Licensing Capsule is currently unable to handle this request.”
 
-![404 Page not Found]()
-![500 Server Error]()
+![404 Page not Found](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/404_error_page.png)
+![500 Server Error](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/500_error_page.png)
