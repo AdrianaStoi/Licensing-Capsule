@@ -86,19 +86,19 @@ The user stories below were not implemented in the project due to time constrain
 
 ### Design, colors and typography
 
-* Throughout the site, there were illustrations picturing cloud computing, software, corporations and various technology elements.
+Throughout the site, there were illustrations picturing cloud computing, software, corporations and various technology elements.
 
-* The colour palette chosen was mainly shades of blue, grey and orange. Blue was the dominant color choice, which aligns with the conventions of technology-related websites and gives users a sense of familiarity.
+The colour palette chosen was mainly shades of blue, grey and orange. Blue was the dominant color choice, which aligns with the conventions of technology-related websites and gives users a sense of familiarity:
 
-  * Color used for the body-background: #ececec
-  * The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the "News" page.
-  * The color choice for the nvagation bar, Login, Register was #aaebef, selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme.
+* Color used for the body-background: #ececec
+* The text color scheme was black for the paragraph text and shade of blue #00008b, for heading and the nvaigation menu. This particular shade of blue was selected to align with the color of the logo. Additionally, it was applied to certain containers like the one used for Product Family and the landing container on the "News" page.
+* The color choice for the nvagation bar, Login, Register was #aaebef, selected to harmonize with the color of the static landing image on the homepage, ensuring a cohesive visual theme.
 
-* Google fonts "Alegreya Sans" and "Exo" were used. Specifically, "Exo" was employed for headings, navbar and buttons and "Alegreya Sans" was chosen for paragraphs.
+Google fonts "Alegreya Sans" and "Exo" were used. Specifically, "Exo" was employed for headings, navbar and buttons and "Alegreya Sans" was chosen for paragraphs.
 
-* The reason "Exo" font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing "EXO" font and "Alegreya Sans" is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
+The reason "Exo" font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing "EXO" font and "Alegreya Sans" is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
 
-* Sans Serif font was used as alternative font.
+Sans Serif font was used as alternative font.
 
 ## Wireframes and Database schema
 
@@ -330,12 +330,106 @@ Once they are registered, they are logged in. They are prompted with a success m
 
 ### Codeanywhere
 
-* I used Codenywhere to create and run the project. Here are the steps to create the workspace and run the project:
+* I used Codeanywhere to develop the project. Here are the steps to create the workspace and run the project:
 * Log in to [Codeanywhere](https://app.codeanywhere.com/) using GitHub account
+* On the Dashboard, click on “New Workspace” which can be found under “Workspaces” section
+* Copy and paste the Repository URL created in GitHub by using the [Code Institute p4-template](https://github.com/Code-Institute-Org/ci-full-template) into the designated field
+* Click on Create.
+* New Workspace is created in Codeanywhere.
+* To run and view the project written in Codeanywhere, click on “Terminal” in the upper bar, then select “New Terminal”.
+* The New terminal will open at the bottom part of the page.
+* Install **Django** by using the command “pip3 install 'django<4' gunicorn”
+* Install supporting libraries: “pip3 install dj_database_url==0.5.0 psycopg2”
+* Install **Cloudinary Libraries** by running in the terminal : “pip3 install dj3-cloudinary-storage”and 
+“pip3 install urllib3==1.26.15”
+* Then create the Create requirements file by running the code “pip3 freeze --local > requirements.txt”
+* Create Project by running “django-admin startproject project name (e.g. licensing capsule) .”
+* Create App by using the code “python3 manage.py startapp app name (e.g. news)”
+* In settings.py file add the app to installed apps and save.
+* Migrate the changes in the terminal by using “python3 manage.py migrate”
+* Run the server “python3 manage.py runserver”
+* An error message will appear, copy the host name and add it to “ALLOWED_HOSTS” in the settings.py folder. "e.g. ALLOWED_HOSTS = []"
 
+### Database
 
-###
+I created a Database on [ElephantSQL](https://www.elephantsql.com/) as follows:
 
+* Log in to ElephantSQL account
+* Click on “Create New Instance”
+* Set up the plan:
+  * Give the plan a Name (e.g. project name)
+  * Select the "Tiny Turtle (Free) plan"
+  * Leave the "Tags" field blank
+* Select “Select Region” and then select a data center near
+* Click on “Review”
+* Check that details are correct and then click “Create instance”
+* Return to the ElephantSQL dashboard and click on the database instance name
+* Under the URL section, the database URL is available. Click on the copy icon to copy the URL.
+
+#### Attach the Database
+
+In Codeanywhere terminal:
+
+* Create "env.py" file on top level directory
+* In "env.py" file import os library
+* Set environment variables : “os.environ["DATABASE_URL"] = "Paste in ElephantSQL database URL"
+* Add in secret key : “os.environ["SECRET_KEY"] = "Make up own randomSecretKey"
+
+### Set up the environment and settings.py file
+
+In "settings.py" file in Codeanywhere:
+
+* Reference env.py
+* Create a Remove the insecure secret key and replace it with: “os.environ.get('SECRET_KEY') and add the secret key to env.py”
+* Comment out the old DataBases Section and replace it with the new Database
+* In the Codeanywhere terminal, save all files and Make Migrations using “python3 manage.py migrate”
+
+### Store images to Cloudinary
+
+* Create [Cloudinary account](https://cloudinary.com/)
+* Once logged in go to  Cloudinary Dashboard and copy the CLOUDINARY_URL, e.g. API Environment Variable
+* Add Cloudinary URL to "env.py" file in Codeanywhere
+
+### Create app in Heroku
+
+I deployed the project on Heroku at the beginning of the project and the steps below were followed:
+
+* Log into [Heroku]( https://heroku.com/) account or create new account.
+* From the Heroku dashboard click on “New” on the upper right corner and then click on “Create new app”.
+* Add app name (app name must be unique on Heroku).
+* Then select the appropriate region e.g. “Europe” and then click on “Create app”.
+* Then go to “Settings tab”.
+* Add three config vars:
+  * DATABASE_URL, and add the database URL from ElephantSQL as the value
+  * SECRET_KEY containing the secret key
+  * CLOUDINARY_URL as key and the link as value.
+
+In settings.py file in Codeanywhere:
+
+* Add Cloudinary Libraries to installed apps.
+* Add Cloudinary to be used as store media and static files.
+* Link file to the templates directory in Heroku.
+* Change the templates directory to TEMPLATES_DIR.
+* Add Heroku Hostname to ALLOWED_HOSTS.
+
+In Codenaywhere terminal:
+
+* Create media, static, templates folders on top level directory.
+* Create a Procfile on the top level diectory.
+* In Procfile add “web: gunicorn PROJ_NAME.wsgi”.
+* Add, commit and push changes to GitHub.
+
+### Deploy to Heroku:
+
+* Go to [Heroku account](https://heroku.com/).
+* Go to “Deploy” tab located at the top of the page.
+* Under “Deployment method” section, select Github here, and then confirm connection to Github.  
+* Search for the corresponding Github repository name, e.g. Licensing Capsule and click “Search”.
+* Click on “Connect” to link up the Heroku app to the GitHub repository code.
+* Scroll down on the page, and there are two deployment options in this section: “Automatic deploys” and “Manual deploy”.
+* Under “Manual deploy”, click on “Deploy Branch”.
+* Once is deployed there is a message displayed “Your app was successfully deployed.” And a button “View”.
+* Click on “View” and you are directed to the app deployed and the link.
 
 ## Credits
 
