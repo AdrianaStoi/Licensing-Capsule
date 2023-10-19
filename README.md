@@ -282,10 +282,18 @@ Under this image all articles are listed, but only three articles are visible at
 
 ### Register Page
 
-On the register page, users are asked to enter their name, email (optional field) and create a password:
+* On the register page, users are asked to enter their name, email (optional field) and create a password:
 Once they are registered, they are logged in. They are prompted with a success message alert.
 
 ![Register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/register_page.png)
-![Successfull registration]()
+![Successfull signed in after registration]()
 
 ### Error pages
+
+* Custom error pages were created to provide additional error details and give guidance to the user to return to the site. 
+
+* 404 Page not Found – “The page you are looking for does not exist.”
+* 403 Forbidden – “You are not authorized to perform the requested action.”
+* 500 Server Error – “Licensing Capsule is currently unable to handle this request.”
+
+![404 Page not Found]()
