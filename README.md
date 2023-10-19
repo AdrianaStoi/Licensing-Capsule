@@ -223,4 +223,31 @@ Under this image all articles are listed, but only three articles are visible at
 
 * If the user is not logged in and clicks on the like button, they will be prompted with a modal window which states “You must be logged in to like and leave a comment. “ This prompts users to log in before they interact with the article in these ways.
 
-![Modal-Login or Register to like]()
+![Modal-Login or Register to like](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_modal_message.png)
+
+#### Comments section
+
+* In the Comments section,  users who are not logged in will have read access to view the comments.
+
+* There is also a message displayed “Login or Register to like and leave a comment.” This message encourages users to engage with the community by providing feedback.
+
+![Comments section - user not logged in](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_comments_section_user_not_loggedin.png)
+
+* If no comments are available, there is stated “No comments yet.”
+
+![Comments section -no comments yet]()
+
+* When a user is logged in, they have the option to submit a comment using a comment form. After sending a comment, they will be prompted with the message “Your message is waiting approval.” Comments submitted by users need to be approved by the admin before they are displayed in the comment section.
+
+![Comment form](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_leave_comment.png)
+
+![Comment submitted waiting for approval]()
+
+* Once the comment is approved, it will appear in the comment section, and the logged-in user will have the ability to “Edit” or “Delete” their comment.
+
+![Edit-Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_comments_edit_delete.png)
+
+* When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page and they are be prompted with a success message alert that automatically dismisses after 5 seconds.
+
+* When deleting a comment, the user is prompted with a confirmation message to confirm the deletion. After confirming, the comment will be deleted. They are redirected to the previous page and they are prompted with a success message alert that automatically dismisses after 5 seconds.
+
