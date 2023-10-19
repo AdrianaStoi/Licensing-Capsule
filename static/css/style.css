@@ -96,8 +96,9 @@ a {
 
 /*Style modal singlearticle.html page*/
 .modal-body {
-    background-color: #aaebef;
+    background-color: #00008B;
     font-weight: bolder;
+    color:#ffffff;
 }
 
 .modal-content {

@@ -196,13 +196,31 @@ The user stories below were not implemented in the project due to time constrain
 
 #### Landing image
 
-On the news page, the user will encounter a new corporate illustration with a blue background, aligning with the site’s color palette.
+* On the news page, the user will encounter a new corporate illustration with a blue background, aligning with the site’s color palette.
 Under this image all articles are listed, but only three articles are visible at a time.
 
 ![Landing image - news page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/news_landing_page.png)
 
 #### All articles
 
-Below the list of the three articles, there is the pagination feature that displays the total number of available pages and provides users with the option to navigate to the next or last page. This allows users to easily access and browse through the entire site collection.  
+* Below the list of the three articles, there is the pagination feature that displays the total number of available pages and provides users with the option to navigate to the next or last page. This allows users to easily access and browse through the entire site collection.  
 
 ![All articles -news page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/news_all_articles_and_pagination.png)
+
+### Single article page
+
+* On each article page, the user finds a different illustration by product family type.
+
+![Illustration single article for Microsoft 365 articles](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_dynamic_image.png)
+
+* Under the image the title of the article is displayed. Following the title, users will find the date and time of publication, along with the author’s name and the article’s content.
+
+* At the bottom of the article, there are two icons. One icon represents likes and number of likes. The other icon represents comments showing the corresponding number of comments.
+
+![Article title and publication details](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_article_details.png)
+
+![Article body and like-comment icons](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_body_and_icons.png)
+
+* If the user is not logged in and clicks on the like button, they will be prompted with a modal window which states “You must be logged in to like and leave a comment. “ This prompts users to log in before they interact with the article in these ways.
+
+![Modal-Login or Register to like]()
