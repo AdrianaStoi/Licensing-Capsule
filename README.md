@@ -298,3 +298,27 @@ Once they are registered, they are logged in. They are prompted with a success m
 
 ![404 Page not Found](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/404_error_page.png)
 ![500 Server Error](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/500_error_page.png)
+
+## Technology
+
+### Languages
+
+* Skillset used for the project was HTML, CSS, JavaScript and Python.
+
+### Frameworks, Libraries and Programs used
+
+* [Codeanywhere](https://app.codeanywhere.com/) was used as the editor for developing the site.
+* Django was used as Python framework in the development of the project.
+* [ElephantSQL](https://www.elephantsql.com/) was used as a database for the project.
+* [Django Allauth library](https://docs.allauth.org/en/latest/ ) was utilized for user authentication system.
+* [Cloudinary](https://cloudinary.com/) was used as storage for dynamic images.
+* [Whitenoise library](https://whitenoise.readthedocs.io/en/latest/index.html) was installed and used for the static files and images.
+* Psycopg2 and gunicorn were installed as supporting libraries.
+* [Summernote](https://summernote.org/ )library was used to enable the admin to create the articles.
+* [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) was used for Django Forms.
+* [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.1/getting-started/introduction/) was used for general layout, spacing and buttons.
+* [Heroku](https://dashboard.heroku.com/apps) was used as the cloud based hosting platform to deploy the site.
+* [GitHub](https://github.com/AdrianaStoi) - The project's deployment history was tracked using Git commit messages on Github. GitHub also served as agile project management tool.
+* [Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the databse structure. The diagram is available [here - Licensing Capsule - Database Diagram](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_database_er_diagram.pdf).
+* [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE) was used to create the wireframes for site layout. The wireframe can be found [here:Licensing Capsule-Wireframes](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_wireframes.pdf)
+
