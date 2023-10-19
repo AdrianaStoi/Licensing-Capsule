@@ -138,3 +138,17 @@ The user stories below were not implemented in the project due to time constrain
 
 * With this feature the user can navigate from page to page and does not have to use back to revert to the previous page. The navigation bar can be used on all device types: desktop, tablet, and smartphones.
 
+![Navigation bar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_navbar_logo.png)
+
+#### Search Bar
+
+* Under the navigation bar the user can access a search bar, which remains accessible across all pages. This feature enables the user to search for articles. If no articles are found, a message is displayed stating “No articled found.”
+
+* On the article results page, there is a “Back to Home” button to improve the user experience. This button allows users to easily return to the main page.  
+
+![Search bar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_search_bar.png)
+
+![Search results]()
+
+![Search no articles found]()
+
