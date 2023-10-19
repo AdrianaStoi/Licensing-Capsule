@@ -148,7 +148,47 @@ The user stories below were not implemented in the project due to time constrain
 
 ![Search bar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_search_bar.png)
 
-![Search results]()
+![Search results](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/search_results.png)
 
-![Search no articles found]()
+![Search no articles found](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/search_no_articles.png)
+
+#### Landing Page image
+
+* The home page includes an illustration picturing individuals collaborating on the transmission of company data to cloud which conveys the site’s purpose. Additionally, a welcoming message is displayed on the homepage. 
+
+![Landing image - home](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_landing_page.png)
+
+#### About us
+
+* This section provides information about the site owner’s scope. Reassuring the user that they are at the right place for getting their latest Microsoft licensing insights and news.
+  
+![About us section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_about_us_section.png)
+
+#### Latest News
+
+* Beneath the “About us” section, on the left side the user will find the “Latest News” section, where the three most recent articles on the site are dynamically displayed and automatically updated when a new article is published.
+  
+* Each listing includes the article title, date, and time when it was published, the author’s name, and a brief excerpt from the article. The user can access the article when clicking on the title.
+
+![Latest News](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_latest_news.png)
+
+#### Product Families
+
+* On the right-hand side, there is a list of all available Product Families. When a user clicks on a product name, they are redirected to a page that displays all the articles related to that corresponding family name.
+
+* On the article results by product family page, there is a “Back to Home” button to improve the user experience. This button allows users to easily return to the main page.
+
+![Product Families](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_product_families.png)
+
+#### Most liked and commented articles:
+
+* In the final section on the home page the user can find the “Most liked and commented articles”. Three cards are presented: the first and second cards display the two most liked articles and the third card highlights the most commented article. These articles dynamically change based on the number of likes and comments they receive.
+
+![Most liked and commented articles section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_most_liked_and_commented.png)
+
+#### Footer
+
+* The footer section displays the site name and the three social media font awesome icons for Facebook, LinkedIn, and Twitter. The links open in a new tab.
+
+![Footer image](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/home_footer.png)
 
