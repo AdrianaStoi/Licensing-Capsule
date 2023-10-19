@@ -245,7 +245,7 @@ Under this image all articles are listed, but only three articles are visible at
 
 * If the user attempty to refresh the article page immediately after submitting the comment that is pending for approval, a pop=up message will appear as a warning. This message indicates that refresing at this point, might result in the duplication of their action, which leads to the resubmission of the same comment twice if they proceed.
 
-![Confirm Form Resubmission]()
+![Confirm Form Resubmission](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/comment_resubmission_message.png)
   
 * Once the comment is approved, it will appear in the comment section, and the logged-in user will have the ability to “Edit” or “Delete” their comment.
 
@@ -328,7 +328,11 @@ Once they are registered, they are logged in. They are prompted with a success m
 
 ## Deployment
 
-###
+### Codeanywhere
+
+* I used Codenywhere to create and run the project. Here are the steps to create the workspace and run the project:
+* Log in to [Codeanywhere](https://app.codeanywhere.com/) using GitHub account
+
 
 ###
 
@@ -349,7 +353,7 @@ Once they are registered, they are logged in. They are prompted with a success m
 * To edit and delete comments I used as source the [Todo CI walkthrough](https://github.com/ckz8780/ci-fsf-hello-django/blob/c13b414fd2e87a54b4f2788ceffec55be4ade925/todo/views.py)
 * To add pagination I used the code for pagination from [Django Project site](https://docs.djangoproject.com/en/4.2/topics/pagination/).
 * In order to created the function and display the 3 latest articles on the home page, I used as guidance the [Stackflow thread](https://stackoverflow.com/questions/23928866/only-show-the-latest-3-posts-in-django) 
-* For search view I used as source and inspiration the project blog created by [Rathan Kumar](https://github.com/dev-rathankumar/django-blog/blob/main/blogs/views.py) and customized accordingly.
+* To create the Search view I used as source and inspiration the project blog created by [Rathan Kumar](https://github.com/dev-rathankumar/django-blog/blob/main/blogs/views.py) and customized accordingly.
 * For creating query for most likes and most commented articles and display them, I used the [Stackflow thread](https://stackoverflow.com/questions/68575418/django-sort-posts-by-comments-count?rq=3) and I customized it accordingly.
 
 ### Images and content
