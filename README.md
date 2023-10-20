@@ -243,7 +243,7 @@ Under this image all articles are listed, but only three articles are visible at
 
 ![Comment submitted waiting for approval](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/comment_waiting_approval.png)
 
-* If the user attempty to refresh the article page immediately after submitting the comment that is pending for approval, a pop=up message will appear as a warning. This message indicates that refresing at this point, might result in the duplication of their action, which leads to the resubmission of the same comment twice if they proceed.
+* If the user attempts to refresh the article page immediately after submitting the comment that is pending for approval, a pop-up message will appear as a warning. This message indicates that refresing at this point, might result in the duplication of their action, which leads to the resubmission of the same comment twice if they proceed.
 
 ![Confirm Form Resubmission](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/comment_resubmission_message.png)
   
