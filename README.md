@@ -10,7 +10,67 @@ This site is beneficial for both new customers and those who have been long-time
 
 Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
 
-## User Experience (UX)
+## Table of contents
+
+- [Licensing Capsule](#licensing-capsule)
+  - [Table of contents](#table-of-contents)
+  - [User Experience](#user-experience)
+    - [The goal of the site owner](#the-goal-of-the-site-owner)
+    - [The goal of the external user](#the-goal-of-the-external-user)
+    - [User stories](#user-stories)
+      - [EPIC: Site administration](#epic-site-administration)
+      - [EPIC: Site content management](#epic-site-content-management)
+      - [EPIC: User administration](#epic-user-administration)
+      - [EPIC: Article accessibility and navigation](#epic-article-accessibility-and-navigation)
+      - [EPIC: Article categorization and search](#epic-article-categorization-and-search)
+      - [EPIC: User Profile](#epic-user-profile)
+      - [EPIC: User feedback on articles](#epic-user-feedback-on-articles)
+      - [EPIC: Site development documentation](#epic-site-development-documentation)
+    - [Future Features](#future-features)
+    - [Design, colors and typography](#design-colors-and-typography)
+  - [Wireframes and Database schema](#wireframes-and-database-schema)
+    - [Wireframe](#wireframe)
+    - [Database schema](#database-schema)
+  - [Agile Methodology](#agile-methodology)
+  - [Existing Features](#existing-features)
+    - [Home page](#home-page)
+      - [Navigation Bar](#navigation-bar)
+      - [Search Bar](#search-bar)
+      - [Landing Page image](#landing-page-image)
+      - [About us](#about-us)
+      - [Latest News](#latest-news)
+      - [Product Families](#product-families)
+      - [Most liked and commented articles:](#most-liked-and-commented-articles)
+      - [Footer](#footer)
+    - [News page](#news-page)
+      - [Landing image](#landing-image)
+      - [All articles](#all-articles)
+    - [Single article page](#single-article-page)
+      - [Comments section](#comments-section)
+    - [Login page](#login-page)
+    - [Logged in user](#logged-in-user)
+    - [Logout page](#logout-page)
+    - [Register Page](#register-page)
+    - [Error pages](#error-pages)
+  - [Technology](#technology)
+    - [Languages](#languages)
+    - [Frameworks, Libraries and Programs used](#frameworks-libraries-and-programs-used)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [Codeanywhere](#codeanywhere)
+    - [Database](#database)
+      - [Attach the Database](#attach-the-database)
+    - [Set up the environment and settings.py file](#set-up-the-environment-and-settingspy-file)
+    - [Store images to Cloudinary](#store-images-to-cloudinary)
+    - [Create app in Heroku](#create-app-in-heroku)
+    - [Deploy to Heroku:](#deploy-to-heroku)
+  - [Credits](#credits)
+    - [Tutorials](#tutorials)
+    - [Images and content](#images-and-content)
+      - [Content](#content)
+      - [Images](#images)
+
+## User Experience
 
 ### The goal of the site owner
 
@@ -20,7 +80,7 @@ Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
 
 * Users’ scope is to stay informed about the latest Microsoft licensing developments and license terms. To be able to engage with the content and provide valuable feedback and comments. Users want to benefit from valuable insights and updates to enhance their understanding of Microsoft licensing.
 
-### User stories:
+### User stories
 
 * There were created 9 EPICs which were developed into 23 User stories:
 
@@ -67,7 +127,7 @@ Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
 
 23. As a developer I can access a detailed README so that I can understand the process of the site development.
 
-### Future Features:
+### Future Features
 
 The user stories below were not implemented in the project due to time constraints and were labelled as “Won’t Have” on the Kanban board on Github. These user stories and last EPIC will be implemented in the future:
 
@@ -79,10 +139,10 @@ The user stories below were not implemented in the project due to time constrain
 
 16. As a registered user I can access my user profile page so that I can manage my comments and see their status (approved or pending).
 
-#### EPIC: User Profile Enhancement
+**EPIC: User Profile Enhancement**
 
-21. As a user on the site I can save articles in my profile so that I can easily access them at any time.
-22. As a registered user on the site I can share articles on social media directly from the site so that I can easily share insights with other users, promote the site and support the content creator.
+1.  As a user on the site I can save articles in my profile so that I can easily access them at any time.
+2.  As a registered user on the site I can share articles on social media directly from the site so that I can easily share insights with other users, promote the site and support the content creator.
 
 ### Design, colors and typography
 
