@@ -1,6 +1,25 @@
 
 # Testing
 
+## Table of contents
+
+- [testing](#testing)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Lighthouse](#lighthouse)
+  - [Code Validation](#code-validation)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
+  - [Manual Testing](#manual-testing)
+  - [User Story Testing](#user-story-testing)
+  - [Bugs](#bugs)
+    - [Fixed Bugs](#fixed-bugs)
+    - [Unfixed Bugs](#unfixed-bugs)
+  - [Responsiveness on devices](#responsiveness-on-devices)
+    - [iPad Mini](#ipad-mini)
+    - [iPhone 12 Pro](#iphone-12-Pro)
+
 ## Browser Compatibility
 
 I tested the site on different browsers Google Chrome, Edge and Mozilla.
