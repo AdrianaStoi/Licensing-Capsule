@@ -127,6 +127,8 @@ Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
 
 23. As a developer I can access a detailed README so that I can understand the process of the site development.
 
+[Back to table of contents](#table-of-contents)
+
 ### Future Features
 
 The user stories below were not implemented in the project due to time constraints and were labelled as “Won’t Have” on the Kanban board on Github. These user stories and last EPIC will be implemented in the future:
@@ -144,6 +146,8 @@ The user stories below were not implemented in the project due to time constrain
 1.  As a user on the site I can save articles in my profile so that I can easily access them at any time.
 2.  As a registered user on the site I can share articles on social media directly from the site so that I can easily share insights with other users, promote the site and support the content creator.
 
+[Back to table of contents](#table-of-contents)
+
 ### Design, colors and typography
 
 Throughout the site, there were illustrations picturing cloud computing, software, corporations and various technology elements.
@@ -159,6 +163,8 @@ Google fonts "Alegreya Sans" and "Exo" were used. Specifically, "Exo" was employ
 The reason "Exo" font was chosen for the headings is because it is also the font used in the site’s logo. According to the site [Appypie](https://www.appypie.com/blog/font-pairings#:~:text=Two%20fonts%20that%20look%20absolutely,tech%2C%20aerospace%2C%20and%20) such the font pairing "EXO" font and "Alegreya Sans" is considered to be a particularly good fitting for technology oriented websites, which conveys with the site’s design strategy.
 
 Sans Serif font was used as alternative font.
+
+[Back to table of contents](#table-of-contents)
 
 ## Wireframes and Database schema
 
@@ -187,6 +193,8 @@ Sans Serif font was used as alternative font.
 * For each user story I created a Github Issue which includes the EPIC, Acceptance Criteria and Tasks.
 * Each User Story comes with defined acceptance criteria, ensuring a clear understanding of when the User Story can be considered completed. These acceptance criteria are subdivided into tasks, making it easier to execute the User Story.
 * The User stories were categorized according to the MoSCoW prioritization technique from highest to lowest: "Must Have", "Should Have", "Could Have" and "Won't Have". They were assigned to Milestones that corresponded to the Sprints cycles of the project.
+
+[Back to table of contents](#table-of-contents)
 
 ## Existing Features
 
@@ -363,6 +371,8 @@ Once they are registered, they are logged in. They are prompted with a success m
 ![404 Page not Found](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/404_error_page.png)
 ![500 Server Error](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/500_error_page.png)
 
+[Back to table of contents](#table-of-contents)
+
 ## Technology
 
 ### Languages
@@ -385,6 +395,8 @@ Once they are registered, they are logged in. They are prompted with a success m
 * [GitHub](https://github.com/AdrianaStoi) - The project's deployment history was tracked using Git commit messages on Github. GitHub also served as agile project management tool.
 * [Lucidchart](https://www.lucidchart.com/pages/) was used to create and plan the databse structure. The diagram is available [here - Licensing Capsule - Database Diagram](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_database_er_diagram.pdf).
 * [Balsamiq Wireframes](https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEgqiAxWUYgb9TgMNO1yffgUGLUJ1sDE3PpAl5Xf2bSoMCE1me-MSKhoCOOoQAvD_BwE) was used to create the wireframes for site layout. The wireframe can be found [here:Licensing Capsule-Wireframes](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/licensing_capsule_wireframes.pdf)
+
+[Back to table of contents](#table-of-contents)
 
 ## Testing
 Testing and results can be found in the [TESTING.md](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/TESTING.md) file [here](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/TESTING.md).
@@ -496,6 +508,8 @@ In Codenaywhere terminal:
 
 Visit deployed site [here:Licensing Capsule](https://licensing-capsule-55f92c8ddd11.herokuapp.com/)
 
+[Back to table of contents](#table-of-contents)
+
 ## Credits
 
 * I used [Code Institute - Template](https://github.com/Code-Institute-Org/ci-full-template) for the deployable application.
@@ -538,3 +552,5 @@ Visit deployed site [here:Licensing Capsule](https://licensing-capsule-55f92c8dd
 * [Illustration by AlisaRut](https://www.shutterstock.com/image-illustration/call-center-custome-support-technical-service-1910982568)
 * [Illustration by TuGuDesign](https://www.shutterstock.com/image-vector/top-view-office-workplace-2122215641)
 * [Illustration by Designsells](https://www.shutterstock.com/image-illustration/violet-concept-marketing-people-scene-flat-2256240047)
+
+[Back to table of contents](#table-of-contents)

@@ -38,6 +38,8 @@ I tested performance, accessibility, best practice, and SEO using Lighthouse acc
 
 ![Lighthouse report](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_licensing_capsule.png)
 
+[Back to table of contents](#table-of-contents)
+
 ## Code Validation
 
 ### HTML
@@ -98,6 +100,8 @@ No errors were found for modal.js when passing through the official [Jshin](http
 
 All python files were successfully passed through the [PEP8]( https://pep8ci.herokuapp.com/#) official validator without any errors being detected.
 
+[Back to table of contents](#table-of-contents)
+
 ## Manual Testing
 
 * I have thoroughly tested all functions and features, confirming their proper functionality as expected.
@@ -132,6 +136,8 @@ All python files were successfully passed through the [PEP8]( https://pep8ci.her
 |Error pages: 403,404,500 Error |These pages should have a “Back to Home” button which should redirect to the “Home” page | Click | When displayed, these error pages have a “Back to Home” buttons which when clicked redirects to the “Home” page. ![404 error](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/404_error_page.png)|
 | Footer| When clicking on Facebook, Linkedin and Twitter pages, they should redirect to the corresponding site by opening in a new tab. | Click | When clicking on Facebook, Linkedin and Twitter pages, they redirect to the corresponding site by opening in a new tab.|
 
+[Back to table of contents](#table-of-contents)
+
 ## User Story Testing
 
 |                User Story                            |   Testing                                                         |
@@ -154,6 +160,8 @@ All python files were successfully passed through the [PEP8]( https://pep8ci.her
 | As a registered user, I can edit and delete comments so that I can manage my contributions, edit, and remove mistakes or inaccurate information. | <ul><li> Registered users can edit and delete their comments once they have been approved. You will see the “Edit” and “Delete” buttons under your comment.</li></ul>|
 | As a registered site User, I can like an article so that I can show appreciation and support to the content creator. | <ul><li>Registered users can like and unlike articles. The “Like” option can be found at the bottom of each article.</li></ul>|
 | As a site user I can view number of likes and comments of an article so that I can gain valuable insights and perspectives from other readers regarding the topic. | <ul><li>All users can view the number of likes and comments on an article, which is available at the bottom of each article. Additionally, on the home page, users can see the articles with the highest number of likes and comments.</li></ul>|
+
+[Back to table of contents](#table-of-contents)
 
 ## Bugs
 
@@ -189,6 +197,7 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 * I am not aware of any remaining unresolved bugs.
 
+[Back to table of contents](#table-of-contents)
 
 ## Testing Responsiveness
 
@@ -273,6 +282,8 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 ![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_comment_deleted.png)
 
+[Back to table of contents](#table-of-contents)
+
 ### iPhone 12 Pro
 
 * I also conducted testing on an iPhone 12 Pro with a screen resolution of (390x844), and all functions are displayed correctly, as shown below:
@@ -335,5 +346,7 @@ When clicking on a Product Family name from the Home page, all articles were dis
 * Delete comment
 
 ![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_message_success_deletion.png)
+
+[Back to table of contents](#table-of-contents)
 
 **Return to the [README.md](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/README.md) file.**
