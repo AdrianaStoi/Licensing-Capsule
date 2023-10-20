@@ -36,13 +36,13 @@
 
 #### Login Page
 
-![Login page]()
+![Login page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_login.png)
 
 ![Login status](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_loggedin_status.png)
 
 #### Register Page
 
-![Register page]()
+![Register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_register.png)
 
 #### Logout Page
 
@@ -76,7 +76,68 @@
 
 ![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_comment_deleted.png)
 
+### iPhone 12 Pro
 
+* I also conducted testing on an iPhone 12 Pro with a screen resolution of (390x844), and all functions are displayed correctly, as shown below:
+
+#### Home Page
+
+![Home page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_home_page.png)![Home page navbar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_home_navbar.png) ![Home- about us and latest news](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_about_us.png)
+
+![Home-Latest news and product families section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_product_families.png) ![Home Page- Most liked and commented articles](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_most_liked.png)
+
+#### Search bar function
+
+![Search results](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_searchresults.png) ![Search no results](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_no_articles_found.png)
+
+
+#### Articles by product families page
+
+![Articles by product families](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_articles_by_product_family.png)
+
+#### News Page
+
+![News-all articles list](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_allnews_page.png)  ![News-all articles pagination](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_allnews_pagination.png)  ![News-all articles pagination last page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_allnews_second_pagination.png)
+
+#### Login Page
+
+![Login page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_login_page.png) ![Successfully logged in](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_loggedin%20user.png) ![Login status](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_login_status.png)
+
+#### Register Page
+
+![Register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_register_page.png)
+
+#### Logout Page
+
+![Logout page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_logout.png) ![Successfull logout](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_successful_logout.png)
+
+#### Single article page
+
+![Single article body](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_singlearticle.png)
+
+##### Unauthenticated user
+
+* When the user is not logged in, he can see the number of likes and comments. When he clicks on like icon he receives the popup window:
+
+![Comments view and Likes Modal window](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_singlearticle_modal.png) ![Comments view unauthenticated user](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_singlearticle_comment.png)
+
+##### Authenticated user - Comment and like section
+
+* When the user is logged in, the comment form is displayed. They can like, unlike and perform actions as "Edit" and "Delete" their own comments: 
+
+![Authenticated user-comment form and section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_comment_form.png) ![Edit and delete own comment options](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_edit_delete_comment.png)
+
+* Pending comment approval
+  
+![Pending comment approval](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_comment_waiting_approval.png)
+
+* Edit comment
+  
+![Edit comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_edit_comment.png) ![Edit success message](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_edit_successully.png)
+
+* Delete comment
+
+![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_message_success_deletion.png)
 
 ### Responsiveness on devices
 
