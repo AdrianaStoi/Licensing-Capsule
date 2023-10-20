@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['licensing-capsule-55f92c8ddd11.herokuapp.com',
                  '8000-adrianastoi-licensing-ca-b6nwnr8fzy.us2.codeanyapp.com']
 
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
