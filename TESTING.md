@@ -230,19 +230,20 @@ I created a Product Families section to allow users to easily access the article
 
 Initially, I encountered an issue in class "ArticlesByProductFamily" in the "views.py" file, where clicking on a product name on the page, resulted in displaying all articles. The issue was due to the use of an incorrect filter based on "Status", which listed all the Published articles.
 
-![]()
+![Bug articles by product](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_articles_by_product.png)
 
 I resolved this problem by checking in the Admin panel how the articles were filtered when grouped by Product Family.
 I used 'product_name__id__exact' which now correctly displays the relevant articles.
 
-![]()
+![Admin panel](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_solved_articles_by_product_name_usingadminpanel.png)
+![Articles by product family](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_solved_articles_by_product.png)
 
 **Pagination display issue resolved for Galaxy Fold with Media Queries**
 
 The pagination on the last page was not displaying properly on Galaxy Fold. I used dev tools and adjusted the font-size accordingly. I added media queries for max-width 287 devices in the style.css.
 
-![]()
+![Pagination](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_responsiveness_pagination_galaxyfold.png)
 
 On the “News” page I noticed that the pagination number on the final page was not rendering correctly when viewed on the Galaxy Fold. To address this issue, I used dev tools to modify the font size.  I added media queries in the style.css file targeting devices with  a max-width 287 devices.
 
-![]()
+![Pagination solved](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/solved_bug_responsiveness_galaxyfold_pagination.png)
