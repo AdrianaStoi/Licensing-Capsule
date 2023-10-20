@@ -21,7 +21,6 @@ The layout, the features as buttons, search bars, like, comment form, alerts are
 | Mozilla       | Yes                         | Yes                  | Yes                |
 
 
-
 ## Code Validation
 
 ### HTML
@@ -34,13 +33,15 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 
 * Single article page - warnings and errors received on elements caused by the Summernote library used to write the articles. These errors cannot be rectified as they come from the library.
 
-![]()
+![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/html_code_validation_summernote_error.png)
 
-* Also an error received indicating “form” element cannot be a child of “strong” element. I changed the “strong” to “div”. The error is no longer received.
+![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_summernote_code.png)
 
-![]()
+* Also an error was received indicating that a “form” element cannot be a child of “strong” element.
 
-![]()
+![Screenshot error html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_code_validation.png)
+
+* I replaced the “strong” tag with a “div” and the error is no longer appearing.
 
 * Search result page – pass
   
@@ -48,11 +49,11 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
   
 * Login page – pass
 
-* Register page – errors were received regarding the allauth signup template. This code was not visible in the signup/register template and could not be rectified.
+* Register page – errors were received regarding the allauth signup html template. This code is not visible in the signup/register template and could not be rectified.
   
-![]()
+![Screenshot error html code validator for register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/register_allauth_html_code_validation_error.png)
 
-![]()
+![Screenshot html code validator for register page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/register_code_error_validation.png)
 
 * Edit comment page – pass
   
@@ -64,15 +65,17 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 
 ### CSS
 
-The style.css file successfully passed through the [Jigsaw](https://jigsaw.w3.org/css-validator/) official validator without any errors being detected. Only one warning displayed regarding the imported google fonts. 
+The style.css file successfully passed through the [Jigsaw](https://jigsaw.w3.org/css-validator/) official validator without any errors being detected. 
 
-![]()
+![Screenshot CSS code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/css_code_validation.png)
 
-![]()
+Only one warning displayed regarding the imported Google fonts, as per below:
+
+![Screenshot CSS code validator-warning](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/css_code_validation_warning.png)
 
 ### Javascript
 
-No errors were found for modal.js when passing through the official jshin validator  https://jshint.com/
+No errors were found for modal.js when passing through the official [Jshin](https://jshint.com/) validator.  
 
 ### Python
 
