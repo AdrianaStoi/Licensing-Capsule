@@ -434,6 +434,8 @@ In Codenaywhere terminal:
 * Once is deployed there is a message displayed “Your app was successfully deployed.” And a button “View”.
 * Click on “View” and you are directed to the app deployed and the link.
 
+Visit deployed site [here:Licensing Capsule](https://licensing-capsule-55f92c8ddd11.herokuapp.com/)
+
 ## Credits
 
 * I used [Code Institute - Template](https://github.com/Code-Institute-Org/ci-full-template) for the deployable application.

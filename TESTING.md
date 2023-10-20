@@ -222,28 +222,30 @@ All python files were successfully passed through the [PEP8]( https://pep8ci.her
 
 ## Bugs
 
+### Fixed Bugs
+
 **Incorrect display of articles when clicking on Product Family name  from Home page**
 
-When clicking on a Product Family name from the Home page, all articles were displayed instead of the ones relevant to the selected Product Family. 
+When clicking on a Product Family name from the Home page, all articles were displayed instead of the ones relevant to the selected Product Family.
 
-I created a Product Families section to allow users to easily access the articles by Product Family name without having to search in search bar or to manually go through all articles in “News” page.
+* I created a Product Families section to allow users to easily access the articles by Product Family name without having to search in search bar or to manually go through all articles in “News” page.
 
-Initially, I encountered an issue in class "ArticlesByProductFamily" in the "views.py" file, where clicking on a product name on the page, resulted in displaying all articles. The issue was due to the use of an incorrect filter based on "Status", which listed all the Published articles.
+* Initially, I encountered an issue in class "ArticlesByProductFamily" in the "views.py" file, where clicking on a product name on the page, resulted in displaying all articles. The issue was due to the use of an incorrect filter based on "Status", which listed all the Published articles.
 
 ![Bug articles by product](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_articles_by_product.png)
 
-I resolved this problem by checking in the Admin panel how the articles were filtered when grouped by Product Family.
-I used 'product_name__id__exact' which now correctly displays the relevant articles.
+* I resolved this problem by checking in the Admin panel how the articles were filtered when grouped by Product Family.
+* I used 'product_name__id__exact' which now correctly displays the relevant articles. Refer to [commit cd69138](https://github.com/AdrianaStoi/Licensing-Capsule/commit/cd69138b6cc3fd6aea13e3637aa263e9035142e7)
 
 ![Admin panel](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_solved_articles_by_product_name_usingadminpanel.png)
 ![Articles by product family](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_solved_articles_by_product.png)
 
 **Pagination display issue resolved for Galaxy Fold with Media Queries**
 
-The pagination on the last page was not displaying properly on Galaxy Fold. I used dev tools and adjusted the font-size accordingly. I added media queries for max-width 287 devices in the style.css.
+* The pagination on the last page was not displaying properly on Galaxy Fold. I used dev tools and adjusted the font-size accordingly. I added media queries for max-width 287 devices in the style.css.
 
 ![Pagination](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_responsiveness_pagination_galaxyfold.png)
 
-On the “News” page I noticed that the pagination number on the final page was not rendering correctly when viewed on the Galaxy Fold. To address this issue, I used dev tools to modify the font size.  I added media queries in the style.css file targeting devices with  a max-width 287 devices.
+* On the “News” page I noticed that the pagination number on the final page was not rendering correctly when viewed on the Galaxy Fold. To address this issue, I used dev tools to modify the font size.  I added media queries in the style.css file targeting devices with  a max-width 287 devices.
 
 ![Pagination solved](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/solved_bug_responsiveness_galaxyfold_pagination.png)
