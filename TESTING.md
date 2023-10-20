@@ -159,6 +159,11 @@ The layout, the features as buttons, search bars, like, comment form, alerts are
 | Edge          | Yes                         | Yes                  | Yes                |
 | Mozilla       | Yes                         | Yes                  | Yes                |
 
+## Lighthouse
+
+I tested performance, accessibility, best practice, and SEO using Lighthouse accessed via DevTools and here are the results:
+
+![Lighthouse report](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_licensing_capsule.png)
 
 ## Code Validation
 
