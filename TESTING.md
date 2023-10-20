@@ -1,4 +1,33 @@
 
+# Testing
+
+## Testing Responsiveness
+
+* Chrome DevTools was used for testing responsiveness on desktop, tablets, and smartphones.
+  
+* The page layout, images, search button, like/unlike, comment form, comment/like count, login, register/logout, modal message popup when user is not logged in and tries to like an article are all displayed correctly, as expected. The testing on various devices has ensured that the site functions properly and provides the desired user experience.
+
+* I tested on iPad Mini (768x1027) and iPhone 12 Pro (390x844) and these are the results:
+
+### iPad Mini
+
+* The website displays a consistent layout when accessed on an iPad Mini with a screen resolution of 768x1027, as detailed below:
+
+#### Home Page
+
+![ ]()
+
+#### News Page
+
+#### Login Page
+
+#### Register Page
+
+#### Logout Page
+
+#### Single article page
+
+
 
 ### Responsiveness on devices
 
@@ -33,13 +62,13 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 
 * Single article page - warnings and errors received on elements caused by the Summernote library used to write the articles. These errors cannot be rectified as they come from the library.
 
-![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/html_code_validation_summernote_error.png)
+    ![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/html_code_validation_summernote_error.png)
 
-![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_summernote_code.png)
+    ![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_summernote_code.png)
 
-* Also an error was received indicating that a “form” element cannot be a child of “strong” element.
+  * Also under this page an error was received indicating that a “form” element cannot be a child of “strong” element.
 
-![Screenshot error html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_code_validation.png)
+    ![Screenshot error html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_code_validation.png)
 
 * I replaced the “strong” tag with a “div” and the error is no longer appearing.
 
