@@ -31,7 +31,7 @@
                         <p class="mt-4">{{ article.article_body | safe}}</p>
                         <div class="row">
                             <div class="col-1">
-                                <strong class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center">
                                     {% if user.is_authenticated %}
                                     <form class="d-inline" action="{% url 'articlelike' article.slug %}" method="POST">
                                         {% csrf_token %}
@@ -49,7 +49,7 @@
                                     <span class="text-secondary" onclick="showModal('')"><i class="fa-brands fa-gratipay like-button" style="color: #0074d9;"></i></span>
                                     {% endif %}
                                     <span class="text-secondary ms-2 ">{{ article.likes_number }}</span>
-                                </strong>
+                                </div>
                             </div>
                             <div class="col-1 ms-4">
                                 {% with comments.count as total_comments %}

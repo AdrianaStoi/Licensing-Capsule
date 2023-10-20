@@ -16,7 +16,7 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 import cloudinary
 if os.path.isfile('env.py'):
-   import env
+    import env
 
 cloudinary.config(
     cloud_name=("cloud_name"),
@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['licensing-capsule-55f92c8ddd11.herokuapp.com',
                  '8000-adrianastoi-licensing-ca-b6nwnr8fzy.us2.codeanyapp.com']
 
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -79,10 +79,10 @@ MESSAGE_TAGS = {
 MESSAGES_TAGS = {
 
       messages.DEBUG: 'alert-info',
-        messages.INFO: 'alert-info',
-        messages.SUCCESS: 'alert-success',
-        messages.WARNING: 'alert-warning',
-        messages.ERROR: 'alert-danger',
+      messages.INFO: 'alert-info',
+      messages.SUCCESS: 'alert-success',
+      messages.WARNING: 'alert-warning',
+      messages.ERROR: 'alert-danger',
 
 }
 

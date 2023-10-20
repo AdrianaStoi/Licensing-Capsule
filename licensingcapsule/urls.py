@@ -24,4 +24,3 @@ urlpatterns = [
     path('', include('news.urls'), name='news-urls'),
     path('accounts/', include('allauth.urls')),
 ]
-

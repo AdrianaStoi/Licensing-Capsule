@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Article, ProductFamily, Comment 
+from .models import Article, ProductFamily, Comment
 from django.db.models import Q, Count
 from .forms import CommentForm
 from django.contrib import messages
@@ -9,46 +9,47 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-
 class RecentArticle(generic.ListView):
     """
     This view lists 3 of the most recent articles.
-    It includes also an extra_context 
+    It includes also an extra_context
     that lists all Product Family names.
     """
     model = Article
     queryset = Article.objects.filter(
         status=1).order_by('-created_on')[:3]
-    template_name = 'index.html' 
+    template_name = 'index.html'
     context_object_name = 'recent_articles'
     extra_context = {"product_family": ProductFamily.objects.all()}
-    
+
     def get_context_data(self, **kwargs):
         """
-        The function will count likes and comments 
-        and display 2 of the most liked articles 
-        and 1 of the most comment article. 
+        The function will count likes and comments
+        and display 2 of the most liked articles
+        and 1 of the most comment article.
         """
         context = super().get_context_data(**kwargs)
 
-        most_liked_articles = Article.objects.annotate(like_count = Count('likes')).order_by('-like_count')[:2]
-        most_commented_articles = Article.objects.annotate(comment_count = Count('comments')).order_by('-comment_count')[:1]
+        most_liked_articles = Article.objects.annotate(like_count=Count('likes')).order_by('-like_count')[:2]
+        most_commented_articles = Article.objects.annotate(comment_count=Count('comments')).order_by('-comment_count')[:1]
 
         context['most_liked_articles'] = most_liked_articles
         context['most_commented_articles'] = most_commented_articles
         return context
 
+
 class ArticlesByProductFamily(generic.ListView):
     """
-    This view will display the articles by product name. 
+    This view will display the articles by product name.
     """
     model = Article
     template_name = 'productfamily.html'
     context_object_name = 'articles'
-    
+
     def get_queryset(self):
         product_id = self.request.GET.get('product_name__id__exact')
         return Article.objects.filter(product_name=product_id, status=1).order_by('-created_on')
+
 
 class ListArticle(generic.ListView):
     """
@@ -58,16 +59,17 @@ class ListArticle(generic.ListView):
     model = Article
     queryset = Article.objects.filter(
         status=1).order_by('-created_on')
-    template_name = 'news.html' 
+    template_name = 'news.html'
     context_object_name = 'all_articles'
     paginate_by = 3
+
 
 class SingleArticle(View, LoginRequiredMixin):
     """
     This view will display a single article with status 1-'Published'.
-    It will also display the approved comments and likes. 
+    It will also display the approved comments and likes.
     """
-    def get (self, request, slug, *args, **kwargs):
+    def get(self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
         comments = article.comments.filter(approved=True).order_by("-created_on")
@@ -89,8 +91,8 @@ class SingleArticle(View, LoginRequiredMixin):
 
     def post(self, request, slug, *args, **kwargs):
         """
-        This method invoked when a POST request is initiated 
-        on the view through the comment form 
+        This method invoked when a POST request is initiated
+        on the view through the comment form
         The comment form is displayed
         when user is logged in.
         """
@@ -124,9 +126,10 @@ class SingleArticle(View, LoginRequiredMixin):
             },
         )
 
+
 class SearchArticle(generic.ListView):
     """
-    This view will search by the query input 
+    This view will search by the query input
     and list articles if any available.
     """
     model = Article
@@ -136,20 +139,21 @@ class SearchArticle(generic.ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-            return Article.objects.filter( Q(title__icontains=query) | Q(excerpt__icontains=query) | Q(article_body__icontains=query, status=1)).order_by('-created_on')
+            return Article.objects.filter(Q(title__icontains=query) | Q(excerpt__icontains=query) | Q(article_body__icontains=query, status=1)).order_by('-created_on')
         else:
             return Article.objects.none()
+
 
 @login_required
 def editComment(request, comment_id):
     """
-    This function will allow comment owner 
+    This function will allow comment owner
     to edit their comment and save it.
     User must be logged in to access it.
     """
-    comment = get_object_or_404(Comment, pk=comment_id,user=request.user)
+    comment = get_object_or_404(Comment, pk=comment_id, user=request.user)
     comment_form = None
-    article_slug= comment.article.slug
+    article_slug = comment.article.slug
 
     if request.user == comment.user:
         if request.method == 'POST':
@@ -160,18 +164,19 @@ def editComment(request, comment_id):
                 return redirect('singlearticle', slug=article_slug)
             else:
                 comment_form = CommentForm(instance=comment)
-                
-    return render(request, 'editcomment.html', {'comment_form':comment_form, 'comment':comment})
+
+    return render(request, 'editcomment.html', {'comment_form': comment_form, 'comment': comment})
+
 
 @login_required
 def deleteComment(request, comment_id):
     """
-    This function will allow comment owner 
+    This function will allow comment owner
     to delete their comment and save it.
     User must be logged in to access it.
     """
     comment = get_object_or_404(Comment, pk=comment_id, user=request.user)
-    article_slug= comment.article.slug
+    article_slug = comment.article.slug
 
     if request.method == 'POST':
         if request.user == comment.user:
@@ -179,11 +184,12 @@ def deleteComment(request, comment_id):
             messages.success(request, 'You have deleted the comment successfully.')
         return redirect('singlearticle', slug=article_slug)
 
-    return render(request, 'confirmdeletecomment.html', {'comment':comment})
+    return render(request, 'confirmdeletecomment.html', {'comment': comment})
+
 
 class ArticleLike(View, LoginRequiredMixin):
     """
-    This view will allow logged in users to  
+    This view will allow logged in users to
     like or unlike an article.
     """
     def post(self, request, slug, *args, **kwargs):
@@ -191,9 +197,7 @@ class ArticleLike(View, LoginRequiredMixin):
 
         if article.likes.filter(id=request.user.id).exists():
             article.likes.remove(request.user)
-        else: 
+        else:
             article.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('singlearticle', args=[slug]))
-
-
