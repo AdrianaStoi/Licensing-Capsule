@@ -101,7 +101,7 @@
 
 #### Login Page
 
-![Login page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_login_page.png) ![Successfully logged in](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_loggedin%20user.png) ![Login status](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_login_status.png)
+![Login page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_login_page.png)![Successfully logged in](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_loggedin%20user.png)![Login status](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_login_status.png)
 
 #### Register Page
 
@@ -109,7 +109,7 @@
 
 #### Logout Page
 
-![Logout page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_logout.png) ![Successfull logout](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_successful_logout.png)
+![Logout page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_logout.png)![Successfull logout](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_successful_logout.png)
 
 #### Single article page
 
@@ -224,6 +224,30 @@ No errors were found for modal.js when passing through the official [Jshin](http
 ### Python
 
 All python files were successfully passed through the [PEP8]( https://pep8ci.herokuapp.com/#) official validator without any errors being detected.
+
+
+## User Story Testing
+
+|                User Story                            |   Testing                                                         |
+|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+|As an admin, I can access an admin panel where I can view users, comments, and posts and filter in the sections so that I can efficiently oversee and maintain the website and its content.| <ul><li>You can access the admin panel in the backend. In the Admin panel, you can view users, comments, and articles. You can filter each section accordingly.</li></ul>|
+|As an admin I can create, read, update, and delete articles, so that I can manage my articles.   | <ul><li>You can create an article in the admin panel. There is an article section where you can view the existing articles, edit, and delete them. </li></ul>|
+| As an admin I can approve or disapprove comments so that I can filter out inappropriate comments. | <ul><li>You can approve and disapprove the comments from the Comments section in the Admin panel.</li></ul>|
+| As an admin, I can add a title, slug, author, image, content, select status of an article so that I can efficiently create the articles for the website.  | <ul><li>You can create an article and add all the fields, title, slug, author, image, content and select status of an article.</li></ul>|
+| As an admin, I can create draft articles so that I can complete the content at a later time.  | <ul><li>When creating the article there is a dropdown menu which allows you to select “published” or “draft”. </li></ul>|
+| As an admin, I can view and manage registered users so that I can monitor the user base.  | <ul><li> The users can be managed from the Admin panel under the “Users” section. </li></ul>|
+| As a user on the site, I can view articles by clicking on their title so that I can read the full content.  | <ul><li>The site is accessible to all users, allowing them to view and read all listed articles.  The articles can be accessed by clicking on their title.</li></ul>|
+|As a site user, I can view the article’s author and publication date and time so that I stay informed about contributors and remain up to date with the latest developments in specific licensing news and updates. | <ul><li> Under the title of each article, you will find the publication date, time, and the author’s name.  </li></ul>|
+| As a site user, I can read comments of an article so that I can view other readers feedback and insights on the article.  | <ul><li> All users can access and read the comments on any article. </li></ul>|
+| As a site user, I can view the most liked and commented articles so that I can stay informed about licensing trends and most discussed topics within the community. | <ul><li> The most liked and commented articles can be found at the bottom of the home page.These articles are dynamically updated based on the number of likes and comments they receive. </li></ul>|
+| As a user on the site I can search the articles on the site so that I can easily locate the relevant content. | <ul><li>The search bar function is accessible on every page, located in the top-right corner just beneath the navigation bar.</li></ul>|
+| As a user on the site, I can access the articles by Product family so that I can save time and efficiently access the topics I am interested in.  | <ul><li> You can find the Product Family category on the home page, situated to the right of the “Latest articles” section. You can access the relevant articles by clicking on the Product name. </li></ul>|
+| As a frequent site user, I can register on the site so that I can provide feedback on the content and to the content creator and engage with other readers.  | <ul><li>You can register as a user, by clicking on “Register”, located in the top right corner.</li></ul>|
+| As a registered user I can login and see my login status so that that I know when login was successful.  | <ul><li> You can login by selecting “Login” in the top right corner. Once logged in, you are prompted with a message indicating successful login. Furthermore, as long as you are logged in, your username will be displayed in the top-right corner. </li></ul>|
+| As a registered site user I can add a comment on an article so that I can engage with the content, ask questions, offer suggestions to the author, participate in discussions with other readers. | <ul><li> Registered users can submit a comment, through the comment form available at the bottom of each article. This comment form becomes accessible when you log in to your account. </li></ul>|
+| As a registered user, I can edit and delete comments so that I can manage my contributions, edit, and remove mistakes or inaccurate information. | <ul><li> Registered users can edit and delete their comments once they have been approved. You will see the “Edit” and “Delete” buttons under your comment.</li></ul>|
+| As a registered site User, I can like an article so that I can show appreciation and support to the content creator. | <ul><li>Registered users can like and unlike articles. The “Like” option can be found at the bottom of each article.</li></ul>|
+| As a site user I can view number of likes and comments of an article so that I can gain valuable insights and perspectives from other readers regarding the topic. | <ul><li>All users can view the number of likes and comments on an article, which is available at the bottom of each article. Additionally, on the home page, users can see the articles with the highest number of likes and comments.</li></ul>|
 
 ## Bugs
 
