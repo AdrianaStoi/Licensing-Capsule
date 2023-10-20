@@ -15,17 +15,66 @@
 
 #### Home Page
 
-![ ]()
+![Home page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_home_page.png) ![Home-Latest news and product families section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_latest_articles_prodfamilies.png) ![Home Page- Most liked and commented articles](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_most_liked_commented_articles.png)
+
+#### Search bar function
+
+![Search results](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_search_results.png)
+
+![Search no results](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_search_no_results.png)
+
+
+#### Articles by product families page
+
+![Articles by product families](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/articles_by_product_families.png)
 
 #### News Page
 
+![News-all articles list](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_allarticles.png)
+
+![News-all articles pagination](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_allarticles_pagination.png) ![News-all articles pagination last page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_allarticles_pagination_last.png)
+
 #### Login Page
+
+![Login page]()
+
+![Login status](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_loggedin_status.png)
 
 #### Register Page
 
+![Register page]()
+
 #### Logout Page
 
+![Logout page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_loggout.png)
+
 #### Single article page
+
+![Single article body](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_singlearticle.png)
+
+##### Unauthenticated user
+
+* When the user is not logged in, he can see the number of likes and comments. When he clicks on like icon he receives the popup window:
+
+![Comments view and Likes Modal window](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_modal.png)
+
+##### Authenticated user - Comment and like section
+
+* When the user is logged in, the comment form is displayed. They can like, unlike and perform actions as "Edit" and "Delete" their own comments: 
+
+![Authenticated user-comment form and section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_comment_form_edit_del.png)
+
+* Pending comment approval
+  
+![Pending comment approval](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_comment_waiting_approval.png)
+
+* Edit comment
+  
+![Edit comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_edit_comment.png) ![Edit success message](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_successful_edit.png)
+
+* Delete comment
+
+![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_comment_deleted.png)
 
 
 
@@ -66,11 +115,11 @@ I passed all html pages through the [W3C](https://validator.w3.org/) official va
 
     ![Screenshot html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_summernote_code.png)
 
-  * Also under this page an error was received indicating that a “form” element cannot be a child of “strong” element.
+  * Also under this page an error was received indicating that a “form” element may not be a child of “strong” element.
 
     ![Screenshot error html code validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/singlearticle_error_code_validation.png)
 
-* I replaced the “strong” tag with a “div” and the error is no longer appearing.
+  * I replaced the “strong” tag with a “div” and the error is no longer appearing.
 
 * Search result page – pass
   
