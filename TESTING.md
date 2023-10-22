@@ -241,9 +241,12 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 * I tested on iPad Mini (768x1027) and iPhone 12 Pro (390x844) and these are the results:
 
-### iPad Mini
+### iPad Mini 
 
 * The website displays a consistent layout when accessed on an iPad Mini with a screen resolution of 768x1027, as detailed below:
+  
+<details>
+<summary> iPad Mini </summary>
 
 #### Home Page
 
@@ -308,12 +311,16 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 ![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/ipadmini_comment_deleted.png)
 
+</details>
+
 [Back to table of contents](#table-of-contents)
 
 ### iPhone 12 Pro
 
 * I also conducted testing on an iPhone 12 Pro with a screen resolution of (390x844), and all functions are displayed correctly, as shown below:
 
+<details>
+<summary> iPhone 12 Pro </summary>
 #### Home Page
 
 ![Home page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_home_page.png)![Home page navbar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_home_navbar.png) ![Home- about us and latest news](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_about_us.png)
@@ -372,6 +379,8 @@ When clicking on a Product Family name from the Home page, all articles were dis
 * Delete comment
 
 ![Delete comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_confirm_deletion.png) ![Deletion comment confirmed](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_message_success_deletion.png)
+
+</details>
 
 [Back to table of contents](#table-of-contents)
 
