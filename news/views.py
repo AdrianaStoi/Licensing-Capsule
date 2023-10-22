@@ -30,8 +30,17 @@ class RecentArticle(generic.ListView):
         """
         context = super().get_context_data(**kwargs)
 
-        most_liked_articles = Article.objects.annotate(like_count=Count('likes')).order_by('-like_count')[:2]
-        most_commented_articles = Article.objects.annotate(comment_count=Count('comments')).order_by('-comment_count')[:1]
+        most_liked_articles = (
+            Article.objects
+            .annotate(like_count=Count('likes'))
+            .order_by('-like_count')[:2]
+        )
+
+        most_commented_articles = (
+            Article.objects
+            .annotate(comment_count=Count('comments'))
+            .order_by('-comment_count')[:1]
+        )
 
         context['most_liked_articles'] = most_liked_articles
         context['most_commented_articles'] = most_commented_articles
@@ -48,7 +57,10 @@ class ArticlesByProductFamily(generic.ListView):
 
     def get_queryset(self):
         product_id = self.request.GET.get('product_name__id__exact')
-        return Article.objects.filter(product_name=product_id, status=1).order_by('-created_on')
+        return Article.objects.filter(
+            product_name=product_id,
+            status=1
+        ).order_by('-created_on')
 
 
 class ListArticle(generic.ListView):
@@ -72,7 +84,12 @@ class SingleArticle(View, LoginRequiredMixin):
     def get(self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
-        comments = article.comments.filter(approved=True).order_by("-created_on")
+        comments = (
+            article
+            .comments
+            .filter(approved=True)
+            .order_by("-created_on")
+        )
         liked = False
         if article.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -98,7 +115,12 @@ class SingleArticle(View, LoginRequiredMixin):
         """
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
-        comments = article.comments.filter(approved=True).order_by("-created_on")
+        comments = (
+            article
+            .comments
+            .filter(approved=True)
+            .order_by("-created_on")
+        )
         liked = False
         if article.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -139,7 +161,11 @@ class SearchArticle(generic.ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-            return Article.objects.filter(Q(title__icontains=query) | Q(excerpt__icontains=query) | Q(article_body__icontains=query, status=1)).order_by('-created_on')
+            return Article.objects.filter(
+                Q(title__icontains=query) |
+                Q(excerpt__icontains=query) |
+                Q(article_body__icontains=query, status=1)
+            ).order_by('-created_on')
         else:
             return Article.objects.none()
 
@@ -160,12 +186,19 @@ def editComment(request, comment_id):
             comment_form = CommentForm(request.POST, instance=comment)
             if comment_form.is_valid():
                 comment_form.save()
-                messages.success(request, 'You have edited the comment successfully.')
+                messages.success(
+                    request,
+                    'You have edited the comment successfully.'
+                )
                 return redirect('singlearticle', slug=article_slug)
             else:
                 comment_form = CommentForm(instance=comment)
 
-    return render(request, 'editcomment.html', {'comment_form': comment_form, 'comment': comment})
+    context = {
+        'comment_form': comment_form,
+        'comment': comment,
+    }
+    return render(request, 'editcomment.html', context)
 
 
 @login_required
@@ -181,7 +214,10 @@ def deleteComment(request, comment_id):
     if request.method == 'POST':
         if request.user == comment.user:
             comment.delete()
-            messages.success(request, 'You have deleted the comment successfully.')
+            messages.success(
+                request,
+                'You have deleted the comment successfully.'
+            )
         return redirect('singlearticle', slug=article_slug)
 
     return render(request, 'confirmdeletecomment.html', {'comment': comment})
