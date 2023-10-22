@@ -60,6 +60,15 @@ I tested performance, accessibility, best practice, and SEO using Lighthouse acc
 
 ![Lighthouse report](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_licensing_capsule.png)
 
+<details>
+<summary>Lighthouse Results by page</summary>
+![Lighthouse report home]()
+![Lighthouse report news]()
+![Lighthouse report single artile page]()
+![Lighthouse report login]()
+![Lighthouse report logout]()
+![Lighthouse report register]()
+</details>
 [Back to table of contents](#table-of-contents)
 
 ## Code Validation
