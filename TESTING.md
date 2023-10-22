@@ -62,12 +62,12 @@ I tested performance, accessibility, best practice, and SEO using Lighthouse acc
 
 <details>
 <summary>Lighthouse Results by page</summary>
-![Lighthouse report home]()
-![Lighthouse report news]()
-![Lighthouse report single artile page]()
-![Lighthouse report login]()
-![Lighthouse report logout]()
-![Lighthouse report register]()
+![Lighthouse report home](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_licensing_capsule.png)
+![Lighthouse report news](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse-licensing-capsule-news.png)
+![Lighthouse report single article page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_singlearticle.png)
+![Lighthouse report login](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_login_page.png)
+![Lighthouse report logout](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_logout_page.png)
+![Lighthouse report register](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_register_page.png)
 </details>
 [Back to table of contents](#table-of-contents)
 
