@@ -122,9 +122,9 @@ No errors were found for modal.js when passing through the official [Jshin](http
 
 All python files were successfully passed through the [PEP8]( https://pep8ci.herokuapp.com/#) official validator. Long lines were present in both "urls.py" and "views.py" files. These lines were shorttened and resubmitted to the validator without any errors being detected.
 
-The only file containing a message pertains is the "settings.py" for the "AUTH_PASSWORD_VALIDATORS".
+The only file containing a message is the "settings.py" for the "AUTH_PASSWORD_VALIDATORS".
 
-![Screenshot PEP8CI validator]()
+![Screenshot PEP8CI validator](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/pepci_settingspy.png)
 
 [Back to table of contents](#table-of-contents)
 

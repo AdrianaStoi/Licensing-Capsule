@@ -69,6 +69,7 @@ Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
     - [Images and content](#images-and-content)
       - [Content](#content)
       - [Images](#images)
+  - [Acknowledgments](#acknowledgments)
 
 ## User Experience
 
@@ -552,5 +553,9 @@ Visit deployed site [here:Licensing Capsule](https://licensing-capsule-55f92c8dd
 * [Illustration by AlisaRut](https://www.shutterstock.com/image-illustration/call-center-custome-support-technical-service-1910982568)
 * [Illustration by TuGuDesign](https://www.shutterstock.com/image-vector/top-view-office-workplace-2122215641)
 * [Illustration by Designsells](https://www.shutterstock.com/image-illustration/violet-concept-marketing-people-scene-flat-2256240047)
+
+## Acknowledgments
+
+* Many thanks to My Mentor Rohit Sharma for his support, valuable feedback, and guidance. Thanks to my cohort facilitator Kay Welfare for the advice and help offered during our stand-up meetings and as well to the support from the Tutor team.
 
 [Back to table of contents](#table-of-contents)
