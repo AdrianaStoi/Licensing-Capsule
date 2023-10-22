@@ -63,16 +63,22 @@ I tested performance, accessibility, best practice, and SEO using Lighthouse acc
 <details>
 <summary>Lighthouse Results by page</summary>
 
+* Home page
 ![Lighthouse report home](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_licensing_capsule.png)
 
+* News page
 ![Lighthouse report news](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse-licensing-capsule-news.png)
 
+* Single article page
 ![Lighthouse report single article page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_singlearticle.png)
 
+* Login page
 ![Lighthouse report login](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_login_page.png)
 
+* Logout page
 ![Lighthouse report logout](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_logout_page.png)
 
+* Register
 ![Lighthouse report register](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_register_page.png)
 
 </details>
@@ -174,7 +180,7 @@ The only file containing a message is the "settings.py" for the "AUTH_PASSWORD_V
 |Like – logged in user | Authenticated user should be able to like and unlike an article by clicking on the “like” icon, that is provided on the article’s page. | Click on like icon | Authenticated user are able to like and unlike an article by clicking on the “like” icon, that is provided on the article’s page. |
 |Add comment – logged in user |When a user is logged in, they should have the option to submit a comment using a comment form. After sending a comment, they should be prompted with the message “Your message is waiting approval.”| Submit comment | When a user is logged in, they have the option to submit a comment using a comment form. After sending a comment, they will be prompted with the message “Your message is waiting approval.” Once approved it appears in the comment section.![Leave comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_leave_comment.png)![Pending approval](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/comment_waiting_approval.png)|
 | |If the user attempts to refresh immediately after submitting the comment that is pending for approval, a pop-up message should appear as a warning. This message should indicate that refreshing at this point, might result in the duplication of their action, which leads to the resubmission of the same comment twice if they proceed. |Refresh page  | If the user attempts to refresh the article page immediately after submitting the comment that is pending for approval, a pop-up message will appear as a warning. This message indicates that refreshing at this point, might result in the duplication of their action, which leads to the resubmission of the same comment twice if they proceed. ![Confirm form resubmission](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/comment_resubmission_message.png)|
-|Edit comment – logged in user |Logged in users should be able to edit their own comments. When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page and they are be prompted with a success message alert that automatically dismisses after 5 seconds.  | Click on Edit  button | Logged in users can edit their own comments. When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page, and they are be prompted with a success message alert that automatically dismisses after 5 seconds.  ![Edit comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_edit_comment.png) ![Confirmation edit](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_successful_edit_comment.png)|
+|Edit comment – logged in user |Logged in users should be able to edit their own comments. When editing the comment, the user is redirected to a new page where they can make the necessary changes. After editing, they are redirected to the previous page and they are be prompted with a success message alert that automatically dismisses after 5 seconds.  | Click on Edit  button | Logged in users can edit their own comments. When editing the comment, the user is redirected to a new page where they can make the necessary changes. On the "Edit comment" page, the user can view the current comment being displayed. When they click on the "Edit" button, a form with the comment text box is presented. After editing, they are redirected to the previous page, and they are be prompted with a success message alert that automatically dismisses after 5 seconds.  ![Edit comment](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_edit_comment.png) ![Confirmation edit](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_successful_edit_comment.png)|
 |Delete comment – logged in user| Logged in users should be able to delete their own comments. When deleting a comment, the user should be prompted with a confirmation message to confirm the deletion. After confirming, the comment should be deleted. They are redirected to the previous page and they are prompted with a success message alert that automatically dismisses after 5 seconds. | Click on Delete button | Logged in users can delete their own comments. When deleting a comment, the user is prompted with a confirmation message to confirm the deletion. After confirming, the comment will be deleted. They are redirected to the previous page and they are prompted with a success message alert that automatically dismisses after 5 seconds. ![Confirm deletion](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_deletion_confirmation_page.png) ![Comment deleted](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/singlearticle_successul_message_comment_deletion.png)|
 |Error pages: 403,404,500 Error |These pages should have a “Back to Home” button which should redirect to the “Home” page | Click | When displayed, these error pages have a “Back to Home” buttons which when clicked redirects to the “Home” page. ![404 error](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/404_error_page.png)|
 | Footer| When clicking on Facebook, Linkedin and Twitter pages, they should redirect to the corresponding site by opening in a new tab. | Click | When clicking on Facebook, Linkedin and Twitter pages, they redirect to the corresponding site by opening in a new tab.|
@@ -235,6 +241,14 @@ When clicking on a Product Family name from the Home page, all articles were dis
 * On the “News” page I noticed that the pagination number on the final page was not rendering correctly when viewed on the Galaxy Fold. To address this issue, I used dev tools to modify the font size.  I added media queries in the style.css file targeting devices with  a max-width 287 devices.
 
 ![Pagination solved](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/solved_bug_responsiveness_galaxyfold_pagination.png)
+
+**Error message cloud_name**
+
+* While trying to edit an article created in the admin panel, I received the message “Must supply cloud_name in tag or in configuration” displayed below:
+
+![Cloud name error message](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_cloudinary.png)
+
+* I found the solution on the [Slack thread](https://code-institute-room.slack.com/archives/C7EJUQT2N/p1642335247214100?thread_ts=1642316166.200400&cid=C7EJUQT2N) which was to remove  'os.environ.get' from the “cloud_name=os.environ.get("cloud_name")" and to add instead the variable “cloud_name=’cloud_name’ ” . After making the necessary changes, the error no longer appears when I log in as an admin and edit an article.
 
 ### Unfixed Bugs
 
