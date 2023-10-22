@@ -64,21 +64,27 @@ I tested performance, accessibility, best practice, and SEO using Lighthouse acc
 <summary>Lighthouse Results by page</summary>
 
 * Home page
+
 ![Lighthouse report home](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_licensing_capsule.png)
 
 * News page
+
 ![Lighthouse report news](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse-licensing-capsule-news.png)
 
 * Single article page
+
 ![Lighthouse report single article page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_singlearticle.png)
 
 * Login page
+
 ![Lighthouse report login](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_login_page.png)
 
 * Logout page
+
 ![Lighthouse report logout](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_logout_page.png)
 
 * Register
+
 ![Lighthouse report register](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/lighthouse_register_page.png)
 
 </details>
@@ -248,7 +254,7 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 ![Cloud name error message](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/bug_cloudinary.png)
 
-* I found the solution on the [Slack thread](https://code-institute-room.slack.com/archives/C7EJUQT2N/p1642335247214100?thread_ts=1642316166.200400&cid=C7EJUQT2N) which was to remove  'os.environ.get' from the “cloud_name=os.environ.get("cloud_name")" and to add instead the variable “cloud_name=’cloud_name’ ” . After making the necessary changes, the error no longer appears when I log in as an admin and edit an article.
+* I found the solution on the [Slack thread](https://code-institute-room.slack.com/archives/C7EJUQT2N/p1642335247214100?thread_ts=1642316166.200400&cid=C7EJUQT2N) which was to remove  'os.environ.get' from the “cloud_name=os.environ.get("cloud_name")" and to add instead the variable “cloud_name=’cloud_name’”. After making the necessary changes, the error no longer appears when I log in as an admin and edit an article.
 
 ### Unfixed Bugs
 
@@ -352,6 +358,7 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 <details>
 <summary> iPhone 12 Pro </summary>
+
 #### Home Page
 
 ![Home page](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_home_page.png)![Home page navbar](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_home_navbar.png) ![Home- about us and latest news](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_about_us.png)
@@ -395,7 +402,7 @@ When clicking on a Product Family name from the Home page, all articles were dis
 
 ##### Authenticated user - Comment and like section
 
-* When the user is logged in, the comment form is displayed. They can like, unlike and perform actions as "Edit" and "Delete" their own comments: 
+* When the user is logged in, the comment form is displayed. They can like, unlike and perform actions as "Edit" and "Delete" their own comments:
 
 ![Authenticated user-comment form and section](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_comment_form.png) ![Edit and delete own comment options](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagestesting/iphone12pro_edit_delete_comment.png)
 
