@@ -10,6 +10,8 @@ This site is beneficial for both new customers and those who have been long-time
 
 Visit deployed site here : https://licensing-capsule-55f92c8ddd11.herokuapp.com/
 
+![I am responsive](https://github.com/AdrianaStoi/Licensing-Capsule/blob/main/documentation/imagesreadme/i_am_responsive_licensing_capsule.png)
+
 ## Table of contents
 
 - [Licensing Capsule](#licensing-capsule)
