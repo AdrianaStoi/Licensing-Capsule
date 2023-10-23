@@ -146,8 +146,8 @@ The user stories below were not implemented in the project due to time constrain
 
 **EPIC: User Profile Enhancement**
 
-1.  As a user on the site I can save articles in my profile so that I can easily access them at any time.
-2.  As a registered user on the site I can share articles on social media directly from the site so that I can easily share insights with other users, promote the site and support the content creator.
+21.  As a user on the site I can save articles in my profile so that I can easily access them at any time.
+22.  As a registered user on the site I can share articles on social media directly from the site so that I can easily share insights with other users, promote the site and support the content creator.
 
 [Back to table of contents](#table-of-contents)
 
