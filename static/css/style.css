@@ -15,7 +15,7 @@ nav.navbar img  {
 
 /*Style text nav menu*/
 .navbar-nav .nav-link {
-    color: #00008B !important;
+    color: #00008b !important;
     font-weight: bolder;
 }
 
@@ -35,11 +35,11 @@ nav.navbar img  {
 h1, h2, h3, h4, h5 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    color: #00008B;
+    color: #00008b;
 }
 
 a {
-    color: #00008B;
+    color: #00008b;
 }
 
 .landing-div {
@@ -62,7 +62,7 @@ a {
 
 /*Style card product families*/
 .card-product-family {
-    background-color: #00008B;
+    background-color: #00008b;
     border-radius: 1%;
 }
 
@@ -72,19 +72,19 @@ a {
 
 /*Style landing image container from the news.html page */
 .article-image-container {
-    background-color: #00008B;
+    background-color: #00008b;
     min-height: 400px;
 }
 
 .pagination-span {
     font-family: 'Exo', sans-serif;
     font-weight: 300;
-    color: #00008B;
+    color: #00008b;
 }
 
 /*Style featured image from the singlearticle.html page */
 .featured-image-container {
-    background-color: #00008B;
+    background-color: #00008b;
     max-height: 500px;
 }
 
@@ -95,7 +95,7 @@ a {
 
 /*Style modal singlearticle.html page*/
 .modal-body {
-    background-color: #00008B;
+    background-color: #00008b;
     font-weight: bolder;
     color:#ffffff;
 }
@@ -109,13 +109,13 @@ a {
     background-color: #aaebef;
     border-radius: 0.25rem;
     border: 2px solid #aaebef;
-    color: #00008B;
+    color: #00008b;
     font-weight: bolder;
     font-size: large;
 }
 
 .text-register-login {
-    color: #00008B;
+    color: #00008b;
     font-weight: bolder;
 }
 
@@ -211,4 +211,3 @@ footer {
         padding-bottom: 1.5rem!important;
     }
 }
-
